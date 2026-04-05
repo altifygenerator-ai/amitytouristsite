@@ -39,9 +39,23 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-white/10 text-center text-sm text-white/70 py-4">
-        © {new Date().getFullYear()} Amity Tourism. All rights reserved.
-      </div>
+      <div className="border-t border-white/10 text-center text-sm text-white/70 py-6 space-y-4">
+
+  <a
+    href="https://buy.stripe.com/aFa4gz7By3qv67T8BX7N602"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-[color:var(--color-accent)] text-white px-5 py-2 rounded-md font-medium shadow hover:opacity-90 transition"
+  >
+    ❤️ Keep This Website Running
+  </a>
+
+  <div>
+    © {new Date().getFullYear()} Amity Tourism. All rights reserved.
+  </div>
+
+</div>
+      
     </footer>
   )
 }
