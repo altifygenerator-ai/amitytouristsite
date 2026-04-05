@@ -1,9 +1,27 @@
 import { Attraction, Highlight, ItineraryBlock } from "@/types/tourism"
-
 export const amitySEO = {
-  title: "Visit Amity, Arkansas | Small Town Charm Near the Caddo River",
+  title:
+    "Visit Amity Arkansas | Caddo River, Lake Greeson & Local Businesses",
+
   description:
-    "Explore Amity Arkansas, a charming small town near the Caddo River, Lake Greeson, Daisy State Park, and Crater of Diamonds. Plan your trip today.",
+    "Discover Amity Arkansas tourism. Float the Caddo River, visit Lake Greeson, and explore local businesses.",
+
+  openGraph: {
+    title: "Visit Amity Arkansas",
+    description:
+      "Explore the Caddo River, Lake Greeson, and small-town charm in Amity, Arkansas.",
+    url: "https://amitytouristsite.vercel.app/",
+    siteName: "Amity Tourism",
+    images: [
+      {
+        url: "/images/amity/TownSquare.jpg",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 export const amityHero = {
