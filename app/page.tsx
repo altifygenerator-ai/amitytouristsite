@@ -57,6 +57,7 @@ export default function Page() {
   >
     Our History
   </a>
+  
 </div>
       <Section>
         <Highlights items={amityHighlights} />
@@ -120,6 +121,16 @@ export default function Page() {
     Explore Amity Today
   </h2>
 </BackgroundSection>
+    <div className="flex justify-center mt-6">
+  <a
+    href="https://glenwoodtourism.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block bg-white text-black px-6 py-3 rounded-md font-medium shadow hover:shadow-lg transition"
+  >
+    Visit Glenwood →
+  </a>
+</div>
     </main>
   )
 }

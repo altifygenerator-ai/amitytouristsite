@@ -33,6 +33,14 @@ export default function Navbar() {
 >
   History
 </a>
+ <a
+    href="https://www.glenwoodarkansas.org"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-md font-medium shadow hover:opacity-90 transition"
+  >
+    Visit Glenwood →
+  </a>
         </nav>
       </div>
     </header>
