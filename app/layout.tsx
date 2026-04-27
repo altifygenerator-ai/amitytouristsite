@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-cover.jpg",
+        url: "/images/og-cover.png",
         width: 1200,
         height: 630,
         alt: "Amity Arkansas town and surroundings",
