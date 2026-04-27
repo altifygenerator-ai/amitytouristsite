@@ -1,15 +1,17 @@
 import Image from "next/image";
 import { amityHistory } from "@/data/amity";
 export const metadata = {
-  title: "History of Amity Arkansas | Local Heritage & Story",
+  title: "History of Amity Arkansas | Pioneer Roots, Railroad & Local Heritage",
   description:
-    "Discover the history of Amity, Arkansas — from its railroad roots to its strong small-town community and local culture.",
+    "Explore the history of Amity, Arkansas — from its 1847 pioneer settlement near the Caddo River to its railroad growth, timber years, schools, churches, and small-town heritage.",
   keywords: [
     "Amity Arkansas history",
-    "Pike County Arkansas history",
-    "Amity AR tourism",
-    "things to do in Amity Arkansas",
-    "Arkansas small towns",
+    "history of Amity AR",
+    "Amity Arkansas heritage",
+    "Clark County Arkansas history",
+    "Caddo River history",
+    "Amity Trade Days",
+    "Arkansas small town history",
   ],
 };
 export default function HistoryPage() {

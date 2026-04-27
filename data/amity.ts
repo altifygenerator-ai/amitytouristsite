@@ -142,41 +142,81 @@ export const amityFAQ = [
 ]
 export const amityHistory = {
   hero: {
-    title: "History of Amity",
+    title: "The History of Amity, Arkansas",
     description:
-      "A small Arkansas town with deep roots, strong community, and stories that still shape it today.",
-    image: "/images/amity/store.jpg",
+      "From pioneer settlement along the Caddo River to railroad growth, timber work, trade, schools, churches, and the small-town community Amity is today.",
+    image: "/images/history/amity-hero.jpg",
   },
 
   sections: [
     {
-      title: "Early Beginnings",
+      title: "Pioneer beginnings along the Caddo River",
       text:
-        "Amity was founded in the late 1800s and grew around timber, agriculture, and railroad trade. It became a quiet but important stop in southwest Arkansas.",
+        "Amity was founded in 1847 by pioneer families from the Mount Bethel area under the leadership of William F. Browning, who had served as Clark County surveyor. The early settlement formed near the Caddo River, where rich bottomland, fresh water, and natural travel routes made the area useful for farming, families, and trade. Browning built a two-story log house west of Caney Creek that became an early center of community life. He gave the settlement the name Amity, a word tied to peace, friendship, and brotherhood.",
       images: [
-        "/images/amity/OldAmitySchoiol.jpg",
-        "/images/amity/amitytown.jpg",
-      
+        "/images/history/caddo-river.jpg",
+        "/images/history/old-road.jpg",
+        "/images/history/pioneer-cabin.jpg",
       ],
     },
     {
-      title: "A Lasting Community",
+      title: "Church, school, and community roots",
       text:
-        "Through generations, Amity has remained a place where people know each other. Churches, schools, and family businesses shaped its identity.",
+        "Like many early Arkansas towns, Amity grew first around shared institutions instead of large businesses. In 1848, Browning and other local citizens helped form what became Bethel Missionary Baptist Church, one of the earliest religious organizations in the area. A large log church building also served as a schoolhouse, showing how practical early community life had to be. Church, school, family, and local gathering places gave Amity its first real identity.",
       images: [
-        "/images/amity/church.jpg",
-        "/images/amity/oldsquare.webp",
-        "/images/amity/map.jpg",
+        "/images/history/old-church.jpg",
+        "/images/history/schoolhouse.jpg",
+        "/images/history/community.jpg",
       ],
     },
     {
-      title: "Amity Today",
+      title: "A town built around a public square",
       text:
-        "Today, Amity blends historic charm with modern small-town life, offering visitors peace, nature, and authentic local culture.",
+        "After the Civil War era, Amity’s center shifted toward the area where the town stands today. In 1871, Colonel Philander Curtis, Riley Thompson, and Jacob H. Lightsey helped lay out the town around a public square. That square became the center for businesses, churches, schools, and public life. By the 1870s, Amity was developing from a scattered settlement into a real village with stores, gathering places, and a stronger local identity.",
       images: [
-        "/images/amity/TownSquare.jpg",
-        "/images/amity/townsquarecircle.jpg",
-        "/images/amity/cityhall.jpg",
+        "/images/history/town-square.jpg",
+        "/images/history/main-street.jpg",
+        "/images/history/old-storefront.jpg",
+      ],
+    },
+    {
+      title: "Railroad growth and the timber years",
+      text:
+        "Shortly after 1900, the Gurdon and Fort Smith Railroad helped change Amity’s future. Rail access made it easier to move timber, goods, and people through the region. Amity became a shipping and trade center for the surrounding area while nearby sawmills and lumber operations helped drive the local economy. The Bank of Amity opened in 1905, and the town was officially incorporated in 1907, marking an important period of growth.",
+      images: [
+        "/images/history/railroad.jpg",
+        "/images/history/timber.jpg",
+        "/images/history/bank-building.jpg",
+      ],
+    },
+    {
+      title: "Schools, newspapers, and local identity",
+      text:
+        "Education remained a major part of Amity’s story. The Amity Male and Female Academy eventually became part of the public school system, and local schools helped hold the community together for generations. Amity also had newspapers and local publications that recorded town news, business activity, and community life. These institutions helped give the town a voice and kept people connected across rural south Arkansas.",
+      images: [
+        "/images/history/old-school.jpg",
+        "/images/history/newspaper.jpg",
+        "/images/history/classroom.jpg",
+      ],
+    },
+    {
+      title: "Booms, setbacks, and rural resilience",
+      text:
+        "Amity’s history includes both growth and hard seasons. The region saw timber booms, a short-lived gold excitement in the Trap Mountains, and a brief quicksilver mining rush before World War II. Like many rural Arkansas towns, Amity later faced economic changes as timber jobs declined and industries shifted. Still, the town held onto its identity through schools, churches, small businesses, local events, and the people who stayed rooted here.",
+      images: [
+        "/images/history/old-mill.jpg",
+        "/images/history/mountains.jpg",
+        "/images/history/rural-road.jpg",
+      ],
+    },
+    {
+      title: "Amity today",
+      text:
+        "Today, Amity remains a small Arkansas town with deep roots and a strong sense of place. It sits near Glenwood, the Caddo River, Lake Greeson, and other outdoor destinations that connect it to regional tourism and local life. Events like Amity Trade Days have helped bring visitors into town, while families, businesses, churches, and community groups continue the tradition of moving forward without forgetting where the town came from.",
+      images: [
+        "/images/history/amity-today.jpg",
+        "/images/history/trade-days.jpg",
+        "/images/history/caddo-area.jpg",
       ],
     },
   ],
