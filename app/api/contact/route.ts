@@ -20,7 +20,7 @@ export async function POST(req: Request) {
     const resend = new Resend(apiKey);
 
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "promote@hometownwebservicesar.cc",
       to: "altifygenerator@gmail.com",
       subject: "New Contact Form Submission",
       text: JSON.stringify(body, null, 2),

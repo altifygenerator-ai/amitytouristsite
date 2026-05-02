@@ -59,7 +59,7 @@ export default function ExplorePage() {
       </Section>
 
       {/* IMAGE BREAK */}
-      <BackgroundSection image="/images/amity/amitytown.jpg">
+      <BackgroundSection image="/images/amity/history/amitytown.jpg">
         <h2 className="text-4xl font-semibold max-w-2xl">
           Experience the charm of a true Arkansas small town.
         </h2>
