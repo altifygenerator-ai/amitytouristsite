@@ -145,7 +145,7 @@ export const amityHistory = {
     title: "The History of Amity, Arkansas",
     description:
       "From pioneer settlement along the Caddo River to railroad growth, timber work, trade, schools, churches, and the small-town community Amity is today.",
-    image: "/images/history/amity-hero.jpg",
+    image: "/images/amity/cityhall.jpg",
   },
 
   sections: [
