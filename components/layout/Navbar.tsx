@@ -19,7 +19,12 @@ export default function Navbar() {
           <Link href="/local-business" className="hover:opacity-70">
             Local Businesses
           </Link>
-
+          <a
+  href="/history"
+  className="px-3 py-1 border border-white/30 rounded-md hover:bg-white hover:text-black transition"
+>
+  History
+</a>
           {/* CTA Button */}
           <Link
             href="/contact"
@@ -27,12 +32,7 @@ export default function Navbar() {
           >
             Promote Your Business
           </Link>
-          <a
-  href="/history"
-  className="px-3 py-1 border border-white/30 rounded-md hover:bg-white hover:text-black transition"
->
-  History
-</a>
+
  <a
     href="https://www.glenwoodarkansas.org"
     target="_blank"
