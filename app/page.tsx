@@ -17,6 +17,35 @@ import {
 } from "@/data/amity"
 import Link from "next/link"
 import { generateMetadata } from "@/lib/seo"
+import Image from "next/image";
+
+
+const amityFeatured = [
+  {
+    name: "Your Business Here",
+    type: "⭐ Featured Spot",
+    description:
+      "Be the first business visitors see when looking for services in Amity.",
+    image: "/images/placeholder.png",
+    href: "/contact",
+  },
+  {
+    name: "The Fox Pen Coffee Co.",
+    type: "Coffee • Local Favorite",
+    description:
+      "A cozy local coffee shop and hangout spot in Amity.",
+    image: "/images/amity/foxpen.jpg",
+    href: "/local-business",
+  },
+  {
+    name: "Timber Lodge Ranch",
+    type: "Cabins • Lodging",
+    description:
+      "A quiet cabin stay near the Ouachita region and nearby lakes.",
+    image: "/images/amity/timberlodge.webp",
+    href: "/local-business",
+  },
+];
 
 export const metadata = generateMetadata(amitySEO)
 
@@ -43,21 +72,24 @@ export default function Page() {
 />
       
       <Hero data={amityHero}  />
-<div className="flex gap-4 justify-center mt-4">
-  <a
+
+
+<div className="flex gap-4 justify-center mt-6 flex-wrap">
+
+  <Link
     href="/explore"
-    className="bg-white text-black px-6 py-3 rounded-md font-medium"
+    className="px-6 py-3 rounded-full bg-[color:var(--color-accent)] text-white font-medium shadow-md hover:shadow-lg transition hover:scale-[1.02]"
   >
     Explore
-  </a>
+  </Link>
 
-  <a
+  <Link
     href="/history"
-    className="border border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:text-black transition"
+    className="px-6 py-3 rounded-full border border-[color:var(--color-accent)] text-[color:var(--color-accent)] font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
   >
-    Our History
-  </a>
-  
+    Local History
+  </Link>
+
 </div>
       <Section>
         <Highlights items={amityHighlights} />
@@ -67,6 +99,72 @@ export default function Page() {
       <Section>
         <Intro data={amityIntro} />
       </Section>
+      <section className="max-w-5xl mx-auto px-6 py-16">
+
+  <div className="text-center mb-10">
+    <p className="text-sm uppercase tracking-wide text-[color:var(--color-accent)] mb-2">
+      Local Spotlight
+    </p>
+
+    <h2 className="text-3xl font-semibold">
+      Local Businesses in Amity
+    </h2>
+
+    <p className="text-[color:var(--color-muted)] mt-3 max-w-xl mx-auto">
+      Small town, real businesses. Support local spots in Amity and discover
+      places nearby.
+    </p>
+  </div>
+
+  <div className="grid md:grid-cols-3 gap-6">
+
+    {amityFeatured.map((spot, index) => (
+      <Link
+        key={spot.name}
+        href={spot.href}
+        className={`group rounded-xl overflow-hidden shadow transition hover:shadow-lg ${
+          index === 0
+            ? "bg-[color:var(--color-accent)] text-white"
+            : "bg-white text-black"
+        }`}
+      >
+        <div className="relative h-40">
+          <Image
+            src={spot.image}
+            alt={spot.name}
+            fill
+            className="object-cover group-hover:scale-105 transition duration-500"
+          />
+        </div>
+
+        <div className="p-5">
+          <p className="text-xs uppercase tracking-wide mb-2 opacity-80">
+            {spot.type}
+          </p>
+
+          <h3 className="text-lg font-semibold">
+            {spot.name}
+          </h3>
+
+          <p className="mt-2 text-sm opacity-80">
+            {spot.description}
+          </p>
+        </div>
+      </Link>
+    ))}
+
+  </div>
+
+  <div className="text-center mt-10">
+    <Link
+      href="/local-business"
+      className="underline text-sm"
+    >
+      View all local businesses →
+    </Link>
+  </div>
+
+</section>
 <BackgroundSection image="/images/amity/CaddoRiver3.jpg">
   <h2 className="text-4xl font-semibold max-w-2xl">
     Float the Caddo River and experience the quiet beauty of Southwest Arkansas.
