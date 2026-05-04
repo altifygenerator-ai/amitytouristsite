@@ -220,14 +220,29 @@ export default function Page() {
   </h2>
 </BackgroundSection>
     <div className="flex justify-center mt-6">
-  <a
-    href="https://glenwoodtourism.vercel.app"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="inline-block bg-white text-black px-6 py-3 rounded-md font-medium shadow hover:shadow-lg transition"
-  >
-    Visit Glenwood →
-  </a>
+<section className="section pt-0">
+  <div className="container flex flex-wrap justify-center gap-4">
+
+    <a
+      href="https://glenwoodtourism.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-5 py-3 rounded-md font-medium shadow hover:opacity-90 transition"
+    >
+      Visit Glenwood →
+    </a>
+
+    <a
+      href="https://mt-ida-tourism.vercel.app"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 border border-[color:var(--color-accent)] text-[color:var(--color-accent)] px-5 py-3 rounded-md font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
+    >
+      Visit Mount Ida →
+    </a>
+
+  </div>
+</section>
 </div>
     </main>
   )

@@ -33,7 +33,8 @@ export default function Navbar() {
             Promote Your Business
           </Link>
 
- <a
+<div className="flex flex-wrap gap-4">
+  <a
     href="https://www.glenwoodarkansas.org"
     target="_blank"
     rel="noopener noreferrer"
@@ -41,6 +42,16 @@ export default function Navbar() {
   >
     Visit Glenwood →
   </a>
+
+  <a
+    href="https://mt-ida-tourism.vercel.app"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-md font-medium shadow hover:opacity-90 transition"
+  >
+    Visit Mount Ida →
+  </a>
+</div>
         </nav>
       </div>
     </header>
