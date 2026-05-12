@@ -224,7 +224,7 @@ export default function Page() {
   <div className="container flex flex-wrap justify-center gap-4">
 
     <a
-      href="https://glenwoodtourism.vercel.app"
+      href="https://glenwoodarkansas.org"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-5 py-3 rounded-md font-medium shadow hover:opacity-90 transition"
@@ -233,7 +233,7 @@ export default function Page() {
     </a>
 
     <a
-      href="https://mt-ida-tourism.vercel.app"
+      href="https://mountidaarkansas.org"
       target="_blank"
       rel="noopener noreferrer"
       className="inline-flex items-center gap-2 border border-[color:var(--color-accent)] text-[color:var(--color-accent)] px-5 py-3 rounded-md font-medium hover:bg-[color:var(--color-accent)] hover:text-white transition"
