@@ -19,15 +19,13 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-[color:var(--color-bg)]/80 backdrop-blur border-b border-black/5">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
         <Link href="/" className="font-semibold text-lg tracking-wide">
           🌿 Amity Arkansas
         </Link>
 
-        {/* Nav */}
         <nav className="flex items-center gap-6 text-sm">
           <Link href="/explore" className="hover:opacity-70">
-            Things To Do
+            Area Guide
           </Link>
 
           <Link href="/local-business" className="hover:opacity-70">
@@ -39,9 +37,7 @@ export default function Navbar() {
           </Link>
 
           <div className="relative group">
-            <button className="hover:opacity-70">
-              Sister Sites ▾
-            </button>
+            <button className="hover:opacity-70">Nearby Guides ▾</button>
 
             <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black rounded-md shadow-lg border min-w-[190px] py-2">
               {sisterSites.map((site) => (
@@ -58,12 +54,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          {/* CTA Button */}
           <Link
             href="/contact"
             className="bg-[color:var(--color-accent)] text-white px-4 py-2 rounded-md font-medium hover:opacity-90"
           >
-            Promote Your Business
+            Suggest a Place
           </Link>
         </nav>
       </div>

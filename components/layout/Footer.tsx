@@ -2,17 +2,15 @@ export default function Footer() {
   return (
     <footer className="bg-[#2d2a26] text-white mt-24">
       <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
-        {/* About */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Amity Arkansas</h3>
           <p className="text-sm text-white/80">
-            Discover the charm of Amity, Arkansas — from peaceful small-town
-            stops to nearby river floats, lakes, cabins, and outdoor
-            destinations in the Ouachita region.
+            A small-town local guide for Amity, Arkansas, nearby Caddo River
+            trips, local businesses, old history, community memory, and day
+            trips across southwest Arkansas.
           </p>
         </div>
 
-        {/* Explore */}
         <div>
           <h3 className="text-lg font-semibold mb-3">Explore</h3>
           <ul className="space-y-2 text-sm text-white/80">
@@ -23,7 +21,7 @@ export default function Footer() {
             </li>
             <li>
               <a href="/explore" className="hover:underline">
-                Things To Do
+                Area Guide
               </a>
             </li>
             <li>
@@ -38,15 +36,14 @@ export default function Footer() {
             </li>
             <li>
               <a href="/contact" className="hover:underline">
-                Contact
+                Suggest a Place
               </a>
             </li>
           </ul>
         </div>
 
-        {/* Sister Sites */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Sister Sites</h3>
+          <h3 className="text-lg font-semibold mb-3">Nearby Guides</h3>
           <ul className="space-y-2 text-sm text-white/80">
             <li>
               <a
@@ -86,29 +83,27 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Contact CTA */}
         <div>
-          <h3 className="text-lg font-semibold mb-3">Get Listed</h3>
+          <h3 className="text-lg font-semibold mb-3">Help Build It</h3>
           <p className="text-sm text-white/80 mb-4">
-            Own a local business near Amity? Get featured and connect with
-            visitors exploring the area.
+            Know a local business, old photo, history detail, correction, or
+            nearby place we should add?
           </p>
 
           <a
             href="/contact"
             className="inline-block bg-white text-black px-4 py-2 rounded-md text-sm font-medium"
           >
-            Contact Us
+            Send Info
           </a>
         </div>
       </div>
 
-      {/* Bottom bar */}
       <div className="border-t border-white/10 text-sm text-white/70 py-6">
         <div className="max-w-6xl mx-auto px-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div>
-            © {new Date().getFullYear()} Amity Arkansas. Built as a local
-            tourism and business guide.
+            © {new Date().getFullYear()} Amity Arkansas. Built as a small-town
+            local guide.
           </div>
 
           <div className="flex flex-col gap-3 md:items-end">

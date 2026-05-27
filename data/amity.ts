@@ -1,17 +1,18 @@
-import { Attraction, Highlight, ItineraryBlock } from "@/types/tourism"
+import { Attraction, Highlight, ItineraryBlock } from "@/types/tourism";
+
 export const amitySEO = {
   title:
-    "Visit Amity Arkansas | Caddo River, Lake Greeson & Local Businesses",
+    "Amity Arkansas Guide | Caddo River, Local History & Nearby Day Trips",
 
   description:
-    "Discover Amity Arkansas tourism. Float the Caddo River, visit Lake Greeson, and explore local businesses.",
+    "Explore Amity, Arkansas as a quiet local stop near the Caddo River, Glenwood, Lake Greeson, DeGray Lake, Crater of Diamonds, Mount Ida, and Hot Springs.",
 
   openGraph: {
-    title: "Visit Amity Arkansas",
+    title: "Amity Arkansas Guide",
     description:
-      "Explore the Caddo River, Lake Greeson, and small-town charm in Amity, Arkansas.",
-    url: "https://amitytouristsite.vercel.app/",
-    siteName: "Amity Tourism",
+      "A small-town local guide to Amity history, the Caddo River, nearby lakes, local businesses, and quiet Arkansas day trips.",
+    url: "https://amityarkansas.org/",
+    siteName: "Amity Arkansas Guide",
     images: [
       {
         url: "/images/amity/TownSquare.jpg",
@@ -22,195 +23,208 @@ export const amitySEO = {
     locale: "en_US",
     type: "website",
   },
-}
+};
 
 export const amityHero = {
-  eyebrow: "Southwest Arkansas • Ouachita Region",
-  title: "Visit Amity, Arkansas",
+  eyebrow: "Small-Town Arkansas • Caddo River Area",
+  title: "Amity, Arkansas local guide",
   description:
-    "A quiet Arkansas town with a charming square and direct access to the Caddo River, Lake Greeson, and some of the most scenic outdoor destinations in the Ouachita Mountains.",
+    "A quiet hometown stop near the Caddo River, Glenwood, Lake Greeson, DeGray Lake, Crater of Diamonds, Mount Ida, and the Ouachita region.",
   image: "/images/amity/TownSquare.jpg",
-}
+};
 
 export const amityIntro = {
-  heading: "A small town surrounded by Arkansas’ best outdoor destinations",
+  heading: "A small local stop with more around it than people realize",
   text: `
-Amity, Arkansas is a peaceful small town tucked into the Ouachita region, making it an ideal base for exploring nearby rivers, lakes, and state parks. While the town itself offers a quiet historic square and local charm, the real draw is its location.
+Amity is not a big resort town, and it does not need to pretend to be one. Its value is quieter than that. It is a small Arkansas community with a town square, local businesses, deep history, and a useful spot on the map between Glenwood, the Caddo River, Lake Greeson, DeGray Lake, Crater of Diamonds, Mount Ida, and Hot Springs.
 
-Within a short drive, visitors can float the Caddo River, relax along Lake Greeson, explore Daisy State Park, or take a day trip to Crater of Diamonds State Park. Amity offers the kind of slow pace and simplicity that makes it easy to disconnect while still being close to some of Arkansas’ most popular outdoor destinations.
+For visitors, Amity works best as a local stop or nearby base. You can grab food or coffee, learn a little history, check out the Caddo River area, make short drives to nearby lakes and state parks, and still keep the trip simple. For locals, this guide is meant to help keep businesses, old stories, nearby places, and community updates easier to find online.
 `,
-}
+};
 
 export const amityHighlights: Highlight[] = [
-  { label: "Historic small-town square" },
-  { label: "Minutes from Caddo River access" },
-  { label: "Close to Lake Greeson & Daisy State Park" },
-  { label: "Easy day trip to Crater of Diamonds" },
-]
+  { label: "Quiet small-town stop" },
+  { label: "Near the Caddo River" },
+  { label: "Useful base for Lake Greeson & DeGray" },
+  { label: "Close to Glenwood, Mount Ida & Murfreesboro" },
+];
 
 export const amityAttractions: Attraction[] = [
   {
     title: "Amity Town Square",
     description:
-      "A quiet historic square with classic Arkansas charm, local buildings, and a slower pace of life.",
+      "A small-town square with local history, older buildings, city services, and the kind of quiet Arkansas feel that is easy to overlook if you are just passing through.",
     image: "/images/amity/TownSquare.jpg",
-    alt: "Historic Amity Arkansas town square",
+    alt: "Amity Arkansas town square",
   },
   {
-    title: "Caddo River",
+    title: "Caddo River near Amity",
     description:
-      "One of the clearest rivers in Arkansas, perfect for floating, kayaking, swimming, and fishing. A favorite for families and weekend trips.",
+      "The Caddo River is one of the biggest outdoor connections for the Amity area. Visitors can plan river time through nearby Glenwood and the Hwy. 182 area when conditions are right.",
     image: "/images/amity/CaddoRiver4.webp",
-    alt: "Caddo River kayaking near Amity Arkansas",
+    alt: "Caddo River near Amity Arkansas",
+  },
+  {
+    title: "Glenwood and the Caddo River route",
+    description:
+      "Glenwood is only a short drive away and adds restaurants, cabins, river outfitters, local events, and more trip-planning options for people staying near Amity.",
+    image: "/images/amity/CaddoRiverCanoe.webp",
+    alt: "Caddo River canoe near Glenwood Arkansas",
   },
   {
     title: "Lake Greeson",
     description:
-      "A scenic Ouachita lake known for fishing, boating, and peaceful shorelines surrounded by forest.",
+      "A nearby lake option for fishing, boating, camping, scenic drives, and slower outdoor days around Daisy, Murfreesboro, and the Ouachita foothills.",
     image: "/images/amity/LakeGreeson2.jpg",
     alt: "Lake Greeson Arkansas view",
   },
   {
     title: "Daisy State Park",
     description:
-      "Located on Lake Greeson, this park offers camping, cabins, hiking trails, and water access.",
+      "Located on Lake Greeson, Daisy State Park is a practical nearby stop for camping, trails, lake access, family trips, and outdoor weekends.",
     image: "/images/amity/DaisyStatePark1.avif",
     alt: "Daisy State Park Arkansas lake",
   },
   {
     title: "DeGray Lake Resort State Park",
     description:
-      "A full-service state park with beaches, golf, hiking trails, and a resort lodge just a short drive away.",
+      "DeGray Lake gives Amity-area visitors another lake trip option with beaches, trails, golf, lodge stays, and a broader Arkadelphia/Caddo Valley route.",
     image: "/images/amity/Degray1.jpg",
     alt: "DeGray Lake Arkansas",
   },
   {
-    title: "Lake Ouachita",
-    description:
-      "Arkansas’ largest lake, known for crystal-clear water, island camping, and scenic views near Mount Ida.",
-    image: "/images/amity/LakeOuachita1.jpg",
-    alt: "Lake Ouachita Arkansas",
-  },
-  {
     title: "Crater of Diamonds State Park",
     description:
-      "The only public diamond mine in the world where visitors can search for and keep real diamonds.",
+      "Murfreesboro and Crater of Diamonds are close enough for a day trip, especially for families who want something memorable beyond the river and lakes.",
     image: "/images/amity/CraterofDiamonds2.avif",
     alt: "Crater of Diamonds State Park digging field",
   },
-]
+  {
+    title: "Lake Ouachita and Mount Ida",
+    description:
+      "Mount Ida and Lake Ouachita connect Amity to crystal mining, lake weekends, mountain roads, and another part of the Natural State Tourism Project network.",
+    image: "/images/amity/LakeOuachita1.jpg",
+    alt: "Lake Ouachita Arkansas",
+  },
+];
 
 export const amityItinerary: ItineraryBlock[] = [
   {
-    title: "Half-Day in Amity",
+    title: "A simple Amity stop",
     description:
-      "Start with a walk around the Amity town square, then head out to the Caddo River for a float, swim, or relaxing afternoon by the water.",
+      "Walk the town square, grab a local bite or coffee if available, check out nearby businesses, then head toward the Caddo River or Glenwood for the rest of the day.",
   },
   {
-    title: "Weekend Getaway",
+    title: "Caddo River and Glenwood day",
     description:
-      "Stay near Lake Greeson or Daisy State Park, spend a day on the water, and take a second day to explore Crater of Diamonds or DeGray Lake.",
+      "Use Amity as the quiet side of a Caddo River day. Plan the river through Glenwood or nearby access points, then come back through the area for food, rest, or a slower evening.",
   },
   {
-    title: "Outdoor Adventure Trip",
+    title: "Lake and day-trip weekend",
     description:
-      "Use Amity as a central hub to explore the Ouachita region, including Lake Ouachita, hiking trails, and multiple lakes within a short drive.",
+      "Build a weekend around Lake Greeson, Daisy State Park, DeGray Lake, Crater of Diamonds, Mount Ida, or Hot Springs. Amity sits close enough to connect several of those stops without making the trip feel crowded.",
   },
-]
+];
 
 export const amityFAQ = [
   {
-    question: "What is Amity Arkansas known for?",
+    question: "Is Amity, Arkansas a tourist town?",
     answer:
-      "Amity is known for its small-town charm, historic square, and its location near the Caddo River, Lake Greeson, and several major Arkansas outdoor destinations.",
+      "Not in the same way as Hot Springs, Glenwood, or Mount Ida. Amity is better understood as a small local stop and nearby base for Caddo River trips, Lake Greeson, DeGray Lake, Crater of Diamonds, and other southwest Arkansas day trips.",
   },
   {
-    question: "Is Amity Arkansas worth visiting?",
+    question: "What is Amity, Arkansas known for?",
     answer:
-      "Yes, especially if you enjoy quiet towns and outdoor recreation. It is best used as a base for exploring nearby rivers, lakes, and parks.",
+      "Amity is known locally for its small-town setting, old square, Caddo River area connection, timber and railroad history, nearby outdoor trips, and community roots in Clark County near the Pike County line.",
   },
   {
-    question: "How far is the Caddo River from Amity?",
+    question: "What is near Amity, Arkansas?",
     answer:
-      "The Caddo River is just a short drive north of Amity, making it one of the closest and most popular attractions.",
+      "Nearby places include Glenwood, the Caddo River, Lake Greeson, Daisy State Park, DeGray Lake, Crater of Diamonds State Park, Mount Ida, Lake Ouachita, and Hot Springs.",
   },
   {
-    question: "What attractions are near Amity Arkansas?",
+    question: "Can you access the Caddo River near Amity?",
     answer:
-      "Nearby attractions include Lake Greeson, Daisy State Park, DeGray Lake Resort State Park, Lake Ouachita, and Crater of Diamonds State Park.",
+      "The Amity area is close to the Caddo River, including routes and access areas tied to Glenwood and Highway 182. Always check river conditions, local access information, and outfitter guidance before planning a float or fishing trip.",
   },
-]
+  {
+    question: "Why make an Amity guide?",
+    answer:
+      "Because small towns are often the easiest places to lose online. This guide is meant to help people find local businesses, nearby trips, city information, old history, community updates, and places that still matter to people around Amity.",
+  },
+];
+
 export const amityHistory = {
   hero: {
-    title: "The History of Amity, Arkansas",
+    title: "The history of Amity, Arkansas",
     description:
-      "From pioneer settlement along the Caddo River to railroad growth, timber work, trade, schools, churches, and the small-town community Amity is today.",
+      "A small-town story shaped by the Caddo River, early settlement, the public square, railroad growth, timber work, schools, churches, newspapers, and local memory.",
     image: "/images/amity/cityhall.jpg",
   },
 
   sections: [
-  {
-    title: "Pioneer beginnings along the Caddo River",
-    text:
-      "Amity was founded in 1847 by pioneer families from the Mount Bethel area under the leadership of William F. Browning, who had served as Clark County surveyor. The early settlement formed near the Caddo River, where rich bottomland, fresh water, and natural travel routes made the area useful for farming, families, and trade. Browning built a two-story log house west of Caney Creek that became an early center of community life. He gave the settlement the name Amity, a word tied to peace, friendship, and brotherhood.",
-    images: [
-      "/images/amity/history/map.jpg",
-      "/images/amity/history/amitytown.jpg",
-    ],
-  },
-  {
-    title: "Church, school, and community roots",
-    text:
-      "Like many early Arkansas towns, Amity grew first around shared institutions instead of large businesses. In 1848, Browning and other local citizens helped form what became Bethel Missionary Baptist Church, one of the earliest religious organizations in the area. A large log church building also served as a schoolhouse, showing how practical early community life had to be. Church, school, family, and local gathering places gave Amity its first real identity.",
-    images: [
-      "/images/amity/history/church.jpg",
-      "/images/amity/history/OldAmitySchool.jpg",
-    ],
-  },
-  {
-    title: "A town built around a public square",
-    text:
-      "After the Civil War era, Amity’s center shifted toward the area where the town stands today. In 1871, Colonel Philander Curtis, Riley Thompson, and Jacob H. Lightsey helped lay out the town around a public square. That square became the center for businesses, churches, schools, and public life. By the 1870s, Amity was developing from a scattered settlement into a real village with stores, gathering places, and a stronger local identity.",
-    images: [
-      "/images/amity/history/oldsquare.webp",
-      "/images/amity/history/store.jpg",
-    ],
-  },
-  {
-    title: "Railroad growth and the timber years",
-    text:
-      "Shortly after 1900, the Gurdon and Fort Smith Railroad helped change Amity’s future. Rail access made it easier to move timber, goods, and people through the region. Amity became a shipping and trade center for the surrounding area while nearby sawmills and lumber operations helped drive the local economy. The Bank of Amity opened in 1905, and the town was officially incorporated in 1907, marking an important period of growth.",
-    images: [
-      "/images/amity/history/amitytown.jpg",
-      "/images/amity/history/store.jpg",
-    ],
-  },
-  {
-    title: "Schools, newspapers, and local identity",
-    text:
-      "Education remained a major part of Amity’s story. The Amity Male and Female Academy eventually became part of the public school system, and local schools helped hold the community together for generations. Amity also had newspapers and local publications that recorded town news, business activity, and community life. These institutions helped give the town a voice and kept people connected across rural south Arkansas.",
-    images: [
-      "/images/amity/history/OldAmitySchool.jpg",
-      "/images/amity/history/church.jpg",
-    ],
-  },
-  {
-    title: "Booms, setbacks, and rural resilience",
-    text:
-      "Amity’s history includes both growth and hard seasons. The region saw timber booms, a short-lived gold excitement in the Trap Mountains, and a brief quicksilver mining rush before World War II. Like many rural Arkansas towns, Amity later faced economic changes as timber jobs declined and industries shifted. Still, the town held onto its identity through schools, churches, small businesses, local events, and the people who stayed rooted here.",
-    images: [
-      "/images/amity/history/oldsquare.webp",
-      "/images/amity/history/map.jpg",
-    ],
-  },
-  {
-    title: "Amity today",
-    text:
-      "Today, Amity remains a small Arkansas town with deep roots and a strong sense of place. It sits near Glenwood, the Caddo River, Lake Greeson, and other outdoor destinations that connect it to regional tourism and local life. Events like Amity Trade Days have helped bring visitors into town, while families, businesses, churches, and community groups continue the tradition of moving forward without forgetting where the town came from.",
-    images: [
-      "/images/amity/cityhall.jpg",
-      "/images/amity/townsquarecircle.jpg",
-    ],
-  },
-],
-}
+    {
+      title: "Pioneer beginnings near the Caddo River",
+      text:
+        "Amity’s roots go back to the 1840s, when early families settled near the Caddo River and nearby bottomland. Water, farmland, and old travel routes mattered then, and they still help explain why the town sits where it does. The name Amity points toward peace and friendship, which gives the town a quieter origin story than most people expect.",
+      images: [
+        "/images/amity/history/map.jpg",
+        "/images/amity/history/amitytown.jpg",
+      ],
+    },
+    {
+      title: "Church, school, and community roots",
+      text:
+        "Like a lot of rural Arkansas towns, Amity grew around the practical things people needed first: church, school, family, land, and places to gather. Early buildings often served more than one purpose, and community life was built by people who had to depend on each other. That part of the story still matters because Amity has always been more of a hometown than a tourist stop.",
+      images: [
+        "/images/amity/history/church.jpg",
+        "/images/amity/history/OldAmitySchoiol.jpg",
+      ],
+    },
+    {
+      title: "A town built around a public square",
+      text:
+        "Amity’s town center eventually formed around a public square, giving the community a clear gathering point for business, city life, and local identity. The square is still one of the best visual anchors for the town. Even when businesses change and buildings age, the square helps tell the story of what Amity has been.",
+      images: [
+        "/images/amity/history/oldsquare.webp",
+        "/images/amity/history/store.jpg",
+      ],
+    },
+    {
+      title: "Railroad growth and the timber years",
+      text:
+        "The railroad and timber economy helped shape Amity’s growth in the early 1900s. Rail access made it easier to move goods and lumber, while sawmills and timber work supported families across the surrounding area. This part of Amity’s history is not flashy, but it is important: a lot of the town’s identity was built through work, hauling, cutting, building, and keeping things going.",
+      images: [
+        "/images/amity/history/amitytown.jpg",
+        "/images/amity/history/store.jpg",
+      ],
+    },
+    {
+      title: "Old banks, newspapers, and local voice",
+      text:
+        "Amity once had more of the small-town institutions people expected from a local trade center: banks, stores, schools, churches, and newspapers that carried community news. Those pieces helped the town stay connected before social media, before websites, and before so much local information disappeared into scattered posts and old memories.",
+      images: [
+        "/images/amity/history/oldsquare.webp",
+        "/images/amity/history/map.jpg",
+      ],
+    },
+    {
+      title: "Quicksilver, timber, and forgotten stories",
+      text:
+        "The Amity area also has stranger, lesser-known history, including cinnabar and quicksilver mining activity in the broader region before World War II. Add that to timber, railroads, old schools, and the square, and Amity has more story than a quick drive-through shows. Some of it is documented, some of it lives in family stories, and some of it needs locals to help fill in the gaps.",
+      images: [
+        "/images/amity/history/map.jpg",
+        "/images/amity/history/oldsquare.webp",
+      ],
+    },
+    {
+      title: "Amity today",
+      text:
+        "Today, Amity is best understood as a small hometown and local stop near bigger outdoor routes. It connects naturally to Glenwood, the Caddo River, Lake Greeson, DeGray Lake, Crater of Diamonds, Mount Ida, and Hot Springs. The goal of this guide is to help preserve what is still here, point people toward what is nearby, and make Amity easier to find online again.",
+      images: [
+        "/images/amity/cityhall.jpg",
+        "/images/amity/townsquarecircle.jpg",
+      ],
+    },
+  ],
+};
