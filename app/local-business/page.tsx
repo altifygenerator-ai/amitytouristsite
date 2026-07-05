@@ -5,7 +5,7 @@ import BusinessCard from "@/components/BusinessCard";
 import { featuredBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Local Businesses in Amity Arkansas | Food, Brewery, Pizza, Cafe & Pub",
+  title: "Local Businesses in Amity Arkansas | Food, Brewery, Pizza & Cafe",
   description:
     "Find active local businesses in Amity, Arkansas near Glenwood and the Caddo River, including food, drinks, small-town stops, and ways to support Amity.",
   keywords: [

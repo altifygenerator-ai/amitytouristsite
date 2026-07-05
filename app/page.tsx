@@ -49,7 +49,7 @@ export default function HomePage() {
           <h1>Amity is the quiet stop beside the bigger river trip.</h1>
           <p className="hero-description">
             Drive over from Glenwood for a slower piece of the Caddo River area:
-            a local brewery, pizza, a cafe, a little pub, old Arkansas history,
+            a local brewery, pizza, a cafe, old Arkansas history,
             and back-road river country that feels calm instead of crowded.
           </p>
           <div className="button-row">

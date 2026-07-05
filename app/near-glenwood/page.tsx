@@ -32,7 +32,7 @@ const reasons = [
   {
     title: "A quieter layer of the trip",
     text:
-      "Glenwood has the stronger tourism pull. Amity adds the slower part: an old square, a brewery stop, pizza, cafe food, a pub, and quiet river-country roads.",
+      "Glenwood has the stronger tourism pull. Amity adds the slower part: an old square, a brewery stop, pizza, cafe food, and quiet river-country roads.",
   },
 ];
 

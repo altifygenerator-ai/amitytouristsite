@@ -53,7 +53,7 @@ export const featuredBusinesses: FeaturedBusiness[] = [
       "A small-town brewery in Amity and an easy reason to take the short drive from Glenwood. Stop in for a drink, settle into the slower pace, and give a local business a little of the river traffic that usually stays up the road.",
     shortDescription:
       "Small-town brewery, easy drive from Glenwood, and one of the strongest reasons to stop in Amity.",
-    image: "/images/amity/TownSquare.jpg",
+    image: "/images/amity/slaterock.webp",
     href: "https://www.google.com/maps/search/?api=1&query=Slate%20Rock%20Brewing%20Amity%20Arkansas",
     notes: ["Brewery in Amity", "Good Glenwood side trip", "Local gathering place"],
   },
@@ -66,7 +66,7 @@ export const featuredBusinesses: FeaturedBusiness[] = [
       "An easy local pizza stop for families, river days, ball games, and travelers who would rather spend a few dollars in a small town than rush back to a busier place.",
     shortDescription:
       "Easy local pizza stop for families, river days, and anyone passing through Amity.",
-    image: "/images/amity/townsquarecircle.jpg",
+    image: "/images/amity/hometown-pizza.jpg",
     href: "https://www.google.com/maps/search/?api=1&query=Hometown%20Pizza%20Amity%20Arkansas",
     notes: ["Local food", "Family-friendly stop", "Easy drive from Glenwood"],
   },
@@ -79,22 +79,9 @@ export const featuredBusinesses: FeaturedBusiness[] = [
       "A local food stop that helps Amity feel like more than a pass-through. Pull in for a meal, ask what is open nearby, and let the day slow down a little.",
     shortDescription:
       "Local food stop that keeps Amity useful for residents, visitors, and folks passing through.",
-    image: "/images/amity/cityhall.jpg",
+    image: "/images/amity/trudys.png",
     href: "https://www.google.com/maps/search/?api=1&query=Trudy%27s%20Amity%20Arkansas",
     notes: ["Local cafe", "Small-town food stop", "Useful for visitors"],
-  },
-  {
-    name: "The Little Pub",
-    badge: "Our Pick",
-    placementType: "editorial",
-    category: "Pub • Local Night Stop",
-    description:
-      "A laid-back local pub option for a quiet evening close to Glenwood and the Caddo River area. In a town this size, every open door adds something to the trip.",
-    shortDescription:
-      "A laid-back local pub option in a small town where every open business matters.",
-    image: "/images/amity/history/store.jpg",
-    href: "https://www.google.com/maps/search/?api=1&query=The%20Little%20Pub%20Amity%20Arkansas",
-    notes: ["Local pub", "Laid-back stop", "Verify hours before going"],
   },
 ];
 
@@ -238,6 +225,6 @@ export const faqs = [
   {
     question: "What businesses are open in Amity?",
     answer:
-      "Amity has a small number of local stops such as Slate Rock Brewing, Hometown Pizza, Trudy's, The Little Pub, and other active businesses as they are added. Hours can change, so check before making a special drive.",
+      "Amity has a small number of local stops such as Slate Rock Brewing, Hometown Pizza, Trudy's, and other active businesses as they are added. Hours can change, so check before making a special drive.",
   },
 ];

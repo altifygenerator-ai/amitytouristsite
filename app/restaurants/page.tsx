@@ -6,16 +6,16 @@ import TrackedBusinessLink from "@/components/TrackedBusinessLink";
 import { featuredBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Food & Drinks in Amity Arkansas | Slate Rock, Pizza, Cafe & Pub Stops",
+  title: "Food & Drinks in Amity Arkansas | Slate Rock, Pizza, & Cafe",
   description:
-    "Find food and drink stops in Amity, Arkansas near Glenwood and the Caddo River, including Slate Rock Brewing, Hometown Pizza, Trudy's, The Little Pub, and local small-town stops.",
+    "Find food and drink stops in Amity, Arkansas near Glenwood and the Caddo River, including Slate Rock Brewing, Hometown Pizza, Trudy's, and local small-town stops.",
   keywords: [
     "Amity Arkansas restaurants",
     "food in Amity Arkansas",
     "Slate Rock Brewing Amity",
     "Hometown Pizza Amity Arkansas",
     "Trudy's Amity Arkansas",
-    "The Little Pub Amity Arkansas",
+    
     "restaurants near Glenwood Arkansas",
   ],
   alternates: { canonical: `${siteUrl}/restaurants` },
