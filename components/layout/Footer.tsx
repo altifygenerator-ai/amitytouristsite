@@ -1,134 +1,126 @@
+import Link from "next/link";
+import { sisterSites } from "@/data/amity";
+
+const footerGroups = [
+  {
+    title: "Explore",
+    links: [
+      { href: "/", label: "Home" },
+      { href: "/things-to-do", label: "Things To Do" },
+      { href: "/caddo-river", label: "Caddo River" },
+      { href: "/near-glenwood", label: "Near Glenwood" },
+      { href: "/history", label: "History" },
+    ],
+  },
+  {
+    title: "Food & Local",
+    links: [
+      { href: "/restaurants", label: "Food & Drinks" },
+      { href: "/local-business", label: "Local Businesses" },
+      { href: "/contact", label: "Get Listed" },
+    ],
+  },
+  {
+    title: "Day Trips",
+    links: [
+      { href: "https://www.glenwoodarkansas.org", label: "Glenwood" },
+      { href: "https://www.murfreesboroarkansas.org", label: "Murfreesboro" },
+      { href: "https://www.mountidaarkansas.org", label: "Mount Ida" },
+      { href: "https://www.hotspringsarkansas.org", label: "Hot Springs" },
+    ],
+  },
+  {
+    title: "Business",
+    links: [
+      { href: "/contact", label: "Promote Your Business" },
+      { href: "https://naturalstatetourismproject.org", label: "Natural State Tourism Project" },
+    ],
+  },
+];
+
+function FooterGroup({
+  title,
+  links,
+}: {
+  title: string;
+  links: { href: string; label: string }[];
+}) {
+  return (
+    <div className="footer-group">
+      <h4>{title}</h4>
+      <div className="footer-link-list">
+        {links.map((link) =>
+          link.href.startsWith("http") ? (
+            <a key={`${title}-${link.href}`} href={link.href} target="_blank" rel="noopener noreferrer">
+              {link.label}
+            </a>
+          ) : (
+            <Link key={`${title}-${link.href}`} href={link.href}>
+              {link.label}
+            </Link>
+          )
+        )}
+      </div>
+    </div>
+  );
+}
+
 export default function Footer() {
   return (
-    <footer className="bg-[#2d2a26] text-white mt-24">
-      <div className="max-w-6xl mx-auto px-6 py-12 grid gap-8 md:grid-cols-4">
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Amity Arkansas</h3>
-          <p className="text-sm text-white/80">
-            A small-town local guide for Amity, Arkansas, nearby Caddo River
-            trips, local businesses, old history, community memory, and day
-            trips across southwest Arkansas.
-          </p>
+    <footer className="site-footer">
+      <div className="container footer-main">
+        <div className="footer-brand-row">
+          <div>
+            <h3>Amity Arkansas</h3>
+            <p>
+              Quiet Arkansas days near Glenwood, the Caddo River, local food, old history, small businesses, and uncrowded southwest Arkansas back roads.
+            </p>
+          </div>
+
+          <div className="footer-brand-actions">
+            <Link href="/contact" className="footer-button footer-button-light">
+              Get Listed
+            </Link>
+            <Link href="/caddo-river" className="footer-button footer-button-outline">
+              River Guide
+            </Link>
+          </div>
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Explore</h3>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li>
-              <a href="/" className="hover:underline">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="/explore" className="hover:underline">
-                Area Guide
-              </a>
-            </li>
-            <li>
-              <a href="/local-business" className="hover:underline">
-                Local Businesses
-              </a>
-            </li>
-            <li>
-              <a href="/history" className="hover:underline">
-                Amity History
-              </a>
-            </li>
-            <li>
-              <a href="/contact" className="hover:underline">
-                Suggest a Place
-              </a>
-            </li>
-          </ul>
+        <div className="footer-link-grid">
+          {footerGroups.map((group) => (
+            <FooterGroup key={group.title} title={group.title} links={group.links} />
+          ))}
         </div>
 
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Nearby Guides</h3>
-          <ul className="space-y-2 text-sm text-white/80">
-            <li>
-              <a
-                href="https://glenwoodarkansas.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Visit Glenwood
+        <div className="footer-sister-row">
+          <span>Nearby Arkansas guides</span>
+          <div>
+            {sisterSites.map((site) => (
+              <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer">
+                {site.label}
               </a>
-            </li>
-            <li>
-              <a
-                href="https://mountidaarkansas.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Visit Mount Ida
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://hotspringsarkansas.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline"
-              >
-                Visit Hot Springs
-              </a>
-            </li>
-          </ul>
-
-          <p className="mt-5 text-xs leading-relaxed text-white/50">
-            Part of the <strong>Natural State Tourism Project</strong>, an
-            independent local tourism guide network.
-          </p>
-        </div>
-
-        <div>
-          <h3 className="text-lg font-semibold mb-3">Help Build It</h3>
-          <p className="text-sm text-white/80 mb-4">
-            Know a local business, old photo, history detail, correction, or
-            nearby place we should add?
-          </p>
-
-          <a
-            href="/contact"
-            className="inline-block bg-white text-black px-4 py-2 rounded-md text-sm font-medium"
-          >
-            Send Info
-          </a>
+            ))}
+          </div>
         </div>
       </div>
 
-      <div className="border-t border-white/10 text-sm text-white/70 py-6">
-        <div className="max-w-6xl mx-auto px-6 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <div>
-            © {new Date().getFullYear()} Amity Arkansas. Built as a small-town
-            local guide.
-          </div>
-
-          <div className="flex flex-col gap-3 md:items-end">
-            <a
-              href="https://buy.stripe.com/aFa4gz7By3qv67T8BX7N602"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-[color:var(--color-accent)] text-white px-5 py-2 rounded-md font-medium shadow hover:opacity-90 transition"
-            >
-              ❤️ Keep This Website Running
-            </a>
-
-            <div className="text-white/50">
-              Site by{" "}
-              <a
-                href="https://hometownwebservicesar.cc"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-white transition underline"
-              >
-                Hometown Web Services AR
-              </a>
-            </div>
-          </div>
-        </div>
+      <div className="container footer-bottom">
+        <p>
+          © {new Date().getFullYear()} Amity Arkansas. Quiet stops, local stories, and small businesses near Glenwood and the Caddo River.
+        </p>
+        <p>
+          Part of the{" "}
+          <a href="https://naturalstatetourismproject.org" target="_blank" rel="noopener noreferrer">
+            Natural State Tourism Project
+          </a>
+        </p>
+        <p>
+          Website by{" "}
+          <a href="https://hometownwebservicesar.com" target="_blank" rel="noopener noreferrer">
+            Hometown Web Services
+          </a>
+        </p>
       </div>
     </footer>
   );

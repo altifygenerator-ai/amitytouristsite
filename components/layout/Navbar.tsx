@@ -1,52 +1,53 @@
-import Link from "next/link";
+"use client";
 
-const sisterSites = [
-  {
-    href: "https://glenwoodarkansas.org",
-    label: "Visit Glenwood",
-  },
-  {
-    href: "https://mountidaarkansas.org",
-    label: "Visit Mount Ida",
-  },
-  {
-    href: "https://hotspringsarkansas.org",
-    label: "Visit Hot Springs",
-  },
-];
+import Link from "next/link";
+import { useState } from "react";
+import { businessLinks, guideLinks, sisterSites } from "@/data/amity";
 
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="sticky top-0 z-50 bg-[color:var(--color-bg)]/80 backdrop-blur border-b border-black/5">
-      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <Link href="/" className="font-semibold text-lg tracking-wide">
-          🌿 Amity Arkansas
+    <header className="site-header">
+      <div className="container header-inner">
+        <Link href="/" className="logo" onClick={() => setOpen(false)}>
+          Amity Arkansas
         </Link>
 
-        <nav className="flex items-center gap-6 text-sm">
-          <Link href="/explore" className="hover:opacity-70">
-            Area Guide
-          </Link>
+        <nav className="desktop-nav">
+          <Link href="/">Home</Link>
 
-          <Link href="/local-business" className="hover:opacity-70">
-            Local Businesses
-          </Link>
+          <div className="nav-dropdown">
+            <button type="button">Visitor Guides</button>
+            <div className="dropdown-menu">
+              {guideLinks.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-          <Link href="/history" className="hover:opacity-70">
-            History
-          </Link>
+          <div className="nav-dropdown">
+            <button type="button">Food & Local</button>
+            <div className="dropdown-menu">
+              {businessLinks.map((link) => (
+                <Link key={link.href} href={link.href}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          </div>
 
-          <div className="relative group">
-            <button className="hover:opacity-70">Nearby Guides ▾</button>
-
-            <div className="absolute left-0 top-full hidden group-hover:block bg-white text-black rounded-md shadow-lg border min-w-[190px] py-2">
+          <div className="nav-dropdown">
+            <button type="button">Nearby Guides</button>
+            <div className="dropdown-menu">
               {sisterSites.map((site) => (
                 <a
                   key={site.href}
                   href={site.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block px-4 py-2 hover:bg-black/5"
                 >
                   {site.label}
                 </a>
@@ -54,14 +55,67 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Link
-            href="/contact"
-            className="bg-[color:var(--color-accent)] text-white px-4 py-2 rounded-md font-medium hover:opacity-90"
-          >
-            Suggest a Place
+          <Link className="nav-cta" href="/contact">
+            Get Listed
           </Link>
         </nav>
+
+        <button
+          type="button"
+          className="mobile-menu-button"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+        >
+          {open ? "Close" : "Menu"}
+        </button>
       </div>
+
+      {open ? (
+        <div className="mobile-menu">
+          <nav className="container mobile-menu-inner">
+            <Link href="/" onClick={() => setOpen(false)}>
+              Home
+            </Link>
+
+            <div className="mobile-menu-group">
+              <p>Visitor Guides</p>
+              {guideLinks.map((link) => (
+                <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mobile-menu-group">
+              <p>Food & Local</p>
+              {businessLinks.map((link) => (
+                <Link key={link.href} href={link.href} onClick={() => setOpen(false)}>
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            <div className="mobile-menu-group">
+              <p>Nearby Guides</p>
+              {sisterSites.map((site) => (
+                <a
+                  key={site.href}
+                  href={site.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {site.label}
+                </a>
+              ))}
+            </div>
+
+            <Link className="nav-cta" href="/contact" onClick={() => setOpen(false)}>
+              Get Listed
+            </Link>
+          </nav>
+        </div>
+      ) : null}
     </header>
   );
 }

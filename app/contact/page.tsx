@@ -1,175 +1,77 @@
-"use client";
+import type { Metadata } from "next";
+import Link from "next/link";
+import { siteUrl } from "@/data/amity";
 
-import { useState } from "react";
-
-const suggestionTypes = [
-  "Business to add",
-  "Business update or correction",
-  "Old photo or local memory",
-  "History detail",
-  "Nearby place or day trip",
-  "Community event",
-  "City or resource info",
-  "Other",
-];
+export const metadata: Metadata = {
+  title: "Get Listed in Amity Arkansas | Business Updates & Local Stories",
+  description:
+    "Share an Amity, Arkansas business, correction, local story, photo, or promotion request for the Amity Arkansas visitor guide near Glenwood and the Caddo River.",
+  alternates: { canonical: `${siteUrl}/contact` },
+};
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    business: "",
-    suggestionType: "",
-    message: "",
-  });
-
-  const [submitted, setSubmitted] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    await fetch("/api/contact", {
-      method: "POST",
-      body: JSON.stringify(form),
-    });
-
-    setSubmitted(true);
-  };
-
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16">
-      <section className="text-center max-w-3xl mx-auto mb-14">
-        <p className="text-sm uppercase tracking-wide text-[color:var(--color-accent)] mb-3">
-          Help Build the Guide
-        </p>
-
-        <h1 className="text-4xl font-semibold mb-6 md:text-5xl">
-          Promote, suggest, or help update Amity.
-        </h1>
-
-        <p className="text-[color:var(--color-muted)] leading-relaxed text-lg">
-          This guide is for local businesses, old Amity memories, nearby stops,
-          city information, corrections, and anything that helps people better
-          understand Amity and the surrounding area.
-        </p>
-
-        <div className="mt-6">
-          <a
-            href="tel:8702604880"
-            className="inline-flex items-center gap-2 bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow hover:shadow-lg transition hover:scale-[1.02]"
-          >
-            Call or Text: (870) 260-4880
-          </a>
-        </div>
-      </section>
-
-      <section className="grid md:grid-cols-3 gap-6 mb-14">
-        <div className="bg-[color:var(--bg-card)] rounded-xl p-6 shadow-sm border border-black/5">
-          <h2 className="text-lg font-semibold mb-2">Basic Listing</h2>
-          <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
-            Get your local business added with a short description, contact
-            info, link, and directions so people can find it.
-          </p>
-        </div>
-
-        <div className="bg-[color:var(--bg-card)] rounded-xl p-6 shadow-sm border border-black/5">
-          <h2 className="text-lg font-semibold mb-2">Local Suggestions</h2>
-          <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
-            Send businesses, nearby places, event ideas, old photos, local
-            memories, corrections, or spots that deserve more attention.
-          </p>
-        </div>
-
-        <div className="bg-[color:var(--bg-card)] rounded-xl p-6 shadow-sm border border-black/5">
-          <h2 className="text-lg font-semibold mb-2">Community Memory</h2>
-          <p className="text-sm text-[color:var(--color-muted)] leading-relaxed">
-            Amity’s value is not just tourism. It is history, family stories,
-            schools, churches, businesses, and the places people remember.
+    <main>
+      <section className="section section-warm">
+        <div className="container">
+          <span className="eyebrow">For Amity businesses and locals</span>
+          <h1>Help more people find what is still here.</h1>
+          <p className="lead" style={{ marginTop: 18 }}>
+            Have an open business, a local update, an old photo, a correction, or a
+            story about Amity? Send it in so visitors coming from Glenwood, the
+            Caddo River, Lake Greeson, and southwest Arkansas can find the town more
+            easily.
           </p>
         </div>
       </section>
 
-      <section className="grid md:grid-cols-2 gap-10 items-start">
-        <div className="bg-[color:var(--bg-card)] rounded-xl p-6 shadow-sm border border-black/5">
-          <h2 className="text-xl font-semibold mb-4">What can be submitted?</h2>
-
-          <ul className="space-y-3 text-[color:var(--color-muted)]">
-            <li>• Restaurants, cafes, coffee, groceries, and local shops</li>
-            <li>• Cabins, rentals, lodging, and nearby stays</li>
-            <li>• Local services, health resources, and practical stops</li>
-            <li>• Old Amity photos, school memories, and town stories</li>
-            <li>• Caddo River, Lake Greeson, DeGray, and nearby trip ideas</li>
-            <li>• Corrections for closed businesses or outdated details</li>
-          </ul>
-
-          <p className="mt-6 text-sm text-[color:var(--color-muted)] leading-relaxed">
-            If you are not sure where something fits, send it anyway. The goal
-            is to make Amity easier to find online without pretending it is
-            something it is not.
-          </p>
-
-          <div className="mt-6">
-            <a
-              href="tel:8702604880"
-              className="inline-block text-sm underline text-[color:var(--color-accent)]"
-            >
-              Or call/text (870) 260-4880 →
-            </a>
-          </div>
-        </div>
-
-        <div>
-          <h2 className="text-xl font-semibold mb-4">Send information</h2>
-
-          {submitted ? (
-            <p className="text-green-700 font-medium bg-green-50 rounded-xl p-4">
-              Thanks! Your message was sent.
+      <section className="section">
+        <div className="container contact-panel">
+          <div className="contact-card">
+            <h2>Share your business or local update.</h2>
+            <p>
+              Amity needs clear, current information online. If your business is
+              open, if your hours changed, if you have photos to share, or if a
+              local detail needs corrected, send it through the Natural State
+              Tourism Project.
             </p>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <input
-                placeholder="Name"
-                className="w-full border border-black/10 p-3 rounded-lg bg-white"
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-              />
-
-              <input
-                placeholder="Email"
-                className="w-full border border-black/10 p-3 rounded-lg bg-white"
-                onChange={(e) => setForm({ ...form, email: e.target.value })}
-              />
-
-              <input
-                placeholder="Business / place name, if any"
-                className="w-full border border-black/10 p-3 rounded-lg bg-white"
-                onChange={(e) => setForm({ ...form, business: e.target.value })}
-              />
-
-              <select
-                className="w-full border border-black/10 p-3 rounded-lg bg-white"
-                defaultValue=""
-                onChange={(e) =>
-                  setForm({ ...form, suggestionType: e.target.value })
-                }
+            <p>
+              The goal is simple: help visitors make the short drive from Glenwood,
+              spend money in Amity, and see the town as more than a pass-through.
+            </p>
+            <div className="button-row" style={{ marginTop: 26 }}>
+              <a
+                href="https://naturalstatetourismproject.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary"
               >
-                <option value="" disabled>
-                  What are you sending?
-                </option>
-                {suggestionTypes.map((type) => (
-                  <option key={type}>{type}</option>
-                ))}
-              </select>
+                Contact Natural State Tourism Project
+              </a>
+              <a href="mailto:naturalstatetourismproject@gmail.com" className="btn-secondary">
+                Email the project
+              </a>
+            </div>
+          </div>
 
-              <textarea
-                placeholder="Tell us what should be added, corrected, promoted, or remembered."
-                className="w-full border border-black/10 p-3 rounded-lg bg-white min-h-[160px]"
-                onChange={(e) => setForm({ ...form, message: e.target.value })}
-              />
+          <aside className="contact-card">
+            <h3>What helps most</h3>
+            <p>Business name, address, phone, website or Facebook link, hours, photos, and what people should know before they stop.</p>
+            <p>For corrections, send the wrong detail and the correct one.</p>
+            <p>For history or old photos, include names, dates, photo credit, and whether it is okay to share publicly.</p>
+          </aside>
+        </div>
+      </section>
 
-              <button className="w-full bg-[color:var(--color-accent)] text-white px-6 py-3 rounded-full font-medium shadow hover:shadow-lg transition">
-                Submit
-              </button>
-            </form>
-          )}
+      <section className="section-river section">
+        <div className="container callout">
+          <span className="eyebrow">A better chance to be seen</span>
+          <h2>Glenwood visitors are close enough to become Amity customers.</h2>
+          <p>
+            If your business can serve someone planning a Glenwood weekend, a Caddo
+            River day, a Lake Greeson route, or a quiet small-town stop, let people
+            know you are here.
+          </p>
         </div>
       </section>
     </main>

@@ -1,59 +1,44 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Playfair_Display } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import Navbar from "@/components/layout/Navbar";
 import { Analytics } from "@vercel/analytics/next";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-body",
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-heading",
-});
-
-const siteUrl = "https://visitamityarkansas.com";
+import { siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-
   title: {
-    default: "Visit Amity Arkansas | Things to Do, Places to Eat & Local Guide",
-    template: "%s | Visit Amity Arkansas",
+    default: "Amity Arkansas Guide | Near Glenwood, Caddo River & Local Stops",
+    template: "%s | Amity Arkansas Guide",
   },
-
   description:
-    "Discover Amity, Arkansas — local attractions, restaurants, outdoor activities, history, and small-town charm near Hot Springs and Lake Ouachita.",
-
+    "Visit Amity, Arkansas near Glenwood and the Caddo River for small businesses, food stops, quiet river-country roads, local history, and southwest Arkansas day trips.",
   keywords: [
     "Amity Arkansas",
-    "things to do in Amity AR",
-    "Amity Arkansas attractions",
-    "restaurants in Amity Arkansas",
-    "Hot Springs Arkansas nearby towns",
-    "Lake Ouachita area guide",
-    "small towns in Arkansas to visit",
-    "Amity AR local businesses",
-    "travel Amity Arkansas",
+    "Amity AR",
+    "things to do in Amity Arkansas",
+    "Amity Arkansas restaurants",
+    "Caddo River Amity Arkansas",
+    "Amity near Glenwood Arkansas",
+    "small towns near Glenwood Arkansas",
+    "Slate Rock Brewing Amity",
+    "Hometown Pizza Amity Arkansas",
+    "Trudy's Amity Arkansas",
+    "Clark County Arkansas tourism",
+    "southwest Arkansas day trips",
   ],
-
-  authors: [{ name: "Visit Amity Arkansas" }],
-  creator: "Visit Amity Arkansas",
-  publisher: "Visit Amity Arkansas",
-
+  authors: [{ name: "Natural State Tourism Project" }],
+  creator: "Natural State Tourism Project",
+  publisher: "Natural State Tourism Project",
   alternates: {
     canonical: siteUrl,
   },
-
   openGraph: {
-    title: "Visit Amity Arkansas | Local Guide & Attractions",
+    title: "Amity Arkansas Guide | Quiet Stop Near Glenwood & the Caddo River",
     description:
-      "Explore Amity, Arkansas — attractions, dining, outdoor activities, and local businesses near Hot Springs and Lake Ouachita.",
+      "Visit Amity as a quiet extension of Glenwood with local food, a brewery stop, small-town history, and calmer Caddo River area access.",
     url: siteUrl,
-    siteName: "Visit Amity Arkansas",
+    siteName: "Amity Arkansas Guide",
     locale: "en_US",
     type: "website",
     images: [
@@ -61,19 +46,17 @@ export const metadata: Metadata = {
         url: "/images/og-cover.png",
         width: 1200,
         height: 630,
-        alt: "Amity Arkansas town and surroundings",
+        alt: "Amity Arkansas town square and nearby Caddo River area",
       },
     ],
   },
-
   twitter: {
     card: "summary_large_image",
-    title: "Visit Amity Arkansas",
+    title: "Amity Arkansas Guide",
     description:
-      "Your local guide to Amity, Arkansas — things to do, places to eat, and nearby attractions.",
-    images: ["/images/og-cover.jpg"],
+      "Small-town Amity, Arkansas near Glenwood, the Caddo River, local businesses, and quiet southwest Arkansas day trips.",
+    images: ["/images/og-cover.png"],
   },
-
   robots: {
     index: true,
     follow: true,
@@ -87,19 +70,12 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${playfair.variable}`}
-    >
-      <body className="min-h-screen flex flex-col">
+    <html lang="en">
+      <body>
         <Navbar />
-        <main className="flex-grow">{children}</main>
+        {children}
         <Footer />
         <Analytics />
       </body>
