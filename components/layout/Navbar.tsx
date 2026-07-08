@@ -43,12 +43,7 @@ export default function Navbar() {
             <button type="button">Nearby Guides</button>
             <div className="dropdown-menu">
               {sisterSites.map((site) => (
-                <a
-                  key={site.href}
-                  href={site.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer">
                   {site.label}
                 </a>
               ))}
@@ -56,7 +51,7 @@ export default function Navbar() {
           </div>
 
           <Link className="nav-cta" href="/contact">
-            Get Listed
+            Sponsor / Get Listed
           </Link>
         </nav>
 
@@ -99,19 +94,14 @@ export default function Navbar() {
             <div className="mobile-menu-group">
               <p>Nearby Guides</p>
               {sisterSites.map((site) => (
-                <a
-                  key={site.href}
-                  href={site.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
+                <a key={site.href} href={site.href} target="_blank" rel="noopener noreferrer">
                   {site.label}
                 </a>
               ))}
             </div>
 
             <Link className="nav-cta" href="/contact" onClick={() => setOpen(false)}>
-              Get Listed
+              Sponsor / Get Listed
             </Link>
           </nav>
         </div>

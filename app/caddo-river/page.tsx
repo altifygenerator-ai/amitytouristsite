@@ -1,29 +1,22 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { riverNotes, siteUrl } from "@/data/amity";
+import { riverAccessPoints, riverGuideLinks, riverNotes, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Caddo River Near Amity Arkansas | Quiet Access Notes & Glenwood Route",
+  title: "Caddo River Near Amity Arkansas | Lower Caddo Access & Planning",
   description:
-    "Plan a quiet Caddo River stop near Amity, Arkansas with Glenwood float planning, river access reminders, fishing, wading, safety notes, and respectful public access tips.",
+    "Plan the quieter lower-Caddo side near Amity, Arkansas with Hwy 182 access notes, Glenwood-to-Amity float planning, fishing, safety reminders, and local food stops.",
   keywords: [
     "Caddo River Amity Arkansas",
     "Caddo River access near Amity",
+    "Hwy 182 Caddo River access",
+    "Glenwood to Amity float",
     "Caddo River near Glenwood Arkansas",
-    "uncrowded Caddo River access",
     "Amity Arkansas river access",
-    "Caddo River fishing Arkansas",
   ],
   alternates: { canonical: `${siteUrl}/caddo-river` },
 };
-
-const accessTips = [
-  "Use Glenwood outfitters and current river information for full float planning.",
-  "Treat Amity-area river stops as quiet places for fishing, wading, photos, and slow drives unless you have confirmed legal put-in and take-out access.",
-  "Respect private land. Do not cross fences, block gates, park in driveways, or assume every gravel bar is public.",
-  "Check water levels and weather. The Caddo can rise fast after heavy rain.",
-];
 
 export default function CaddoRiverPage() {
   return (
@@ -32,24 +25,16 @@ export default function CaddoRiverPage() {
         <div className="container split-grid">
           <div className="copy-block">
             <span className="eyebrow">Caddo River near Amity</span>
-            <h1>Quiet water, short drives, and a calmer side of the river.</h1>
+            <h1>The lower-Caddo side of the trip starts here.</h1>
             <p className="lead">
-              The Caddo River is the outdoor thread that keeps Amity connected to
-              the larger Glenwood area. Glenwood is the main float hub. Amity is
-              the quieter river-country stop just down the road.
+              Glenwood is still the main float hub. Amity is the quieter lower-Caddo stop just down the road, with a Hwy 182 access point to verify before you go and a town that could use more river traffic coming back through.
             </p>
             <p>
-              Come here for the slower version of the day: country roads, water
-              glimpses, fishing or wading where access is legal, and a calm place to
-              breathe before heading back toward Glenwood, Lake Greeson, or home.
+              Start with access notes, fishing ideas, float planning, safety reminders, and nearby food stops before you build the day around the lower Caddo.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
-              <a href="https://www.glenwoodarkansas.org/caddo-river" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                Glenwood Caddo River info
-              </a>
-              <Link href="/restaurants" className="btn-secondary">
-                Eat in Amity
-              </Link>
+              <Link href="/caddo-river-access-near-amity" className="btn-primary">Access Near Amity</Link>
+              <Link href="/amity-river-day-itinerary" className="btn-secondary">Plan a River Day</Link>
             </div>
           </div>
           <div className="image-panel">
@@ -61,20 +46,19 @@ export default function CaddoRiverPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">How it feels</span>
-            <h2>Less crowd, more breathing room.</h2>
+            <span className="eyebrow">Start with the right river question</span>
+            <h2>Access, fishing, float notes, and a simple day plan.</h2>
             <p className="lead">
-              The Amity side feels quieter than the places most visitors already
-              know. It is the kind of river area that works best when people keep
-              it simple and respectful.
+              Most people do not need a big sales pitch. They need to know where to start, what is public, what is private, and where to go after the river.
             </p>
           </div>
           <div className="card-grid">
-            {riverNotes.map((note) => (
-              <div key={note.title} className="note-card">
-                <h3>{note.title}</h3>
-                <p>{note.text}</p>
-              </div>
+            {riverGuideLinks.map((link) => (
+              <Link key={link.href} href={link.href} className="note-card link-card">
+                <h3>{link.title}</h3>
+                <p>{link.text}</p>
+                <strong>Read more →</strong>
+              </Link>
             ))}
           </div>
         </div>
@@ -85,12 +69,10 @@ export default function CaddoRiverPage() {
           <Image src="/images/amity/CaddoRiverTrees.jpg" alt="Trees along the Caddo River near Amity Arkansas" fill sizes="100vw" />
         </div>
         <div className="container dark-band-content">
-          <span className="eyebrow">River etiquette</span>
-          <h2>Quiet access stays good when people treat it carefully.</h2>
+          <span className="eyebrow">Public access is not a guess</span>
+          <h2>Use what can be verified. Leave the rest alone.</h2>
           <p>
-            Do not block driveways, cross posted land, leave trash, or turn a calm
-            place into a problem for the people who live nearby. A better river day
-            starts with respect.
+            The Caddo River has public access points, private frontage, changing water, and places that can be misunderstood fast. Check the signs on the ground and leave private land alone.
           </p>
         </div>
       </section>
@@ -98,14 +80,41 @@ export default function CaddoRiverPage() {
       <section className="section section-warm">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Before you go</span>
-            <h2>River access reminders.</h2>
+            <span className="eyebrow">Access point to know</span>
+            <h2>Hwy 182 north of Amity.</h2>
+            <p className="lead">
+              This is the Amity-side access point most worth building around, but it still needs the same common-sense checks: signage, parking, water level, weather, and landowner respect.
+            </p>
           </div>
-          <div className="two-grid">
-            {accessTips.map((tip) => (
-              <div key={tip} className="info-card">
-                <h3>Good to know</h3>
-                <p>{tip}</p>
+          <div className="card-grid">
+            {riverAccessPoints.map((point) => (
+              <Link key={point.slug} href={`/${point.slug}`} className="feature-card">
+                <div className="feature-card-image">
+                  <Image src={point.image} alt={point.name} fill sizes="(max-width: 800px) 100vw, 33vw" />
+                </div>
+                <div className="feature-card-body">
+                  <span className="eyebrow small">{point.status}</span>
+                  <h3>{point.name}</h3>
+                  <p>{point.location}</p>
+                  <strong>View access notes →</strong>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">River notes</span>
+            <h2>How to use the Amity side well.</h2>
+          </div>
+          <div className="card-grid">
+            {riverNotes.map((note) => (
+              <div key={note.title} className="note-card">
+                <h3>{note.title}</h3>
+                <p>{note.text}</p>
               </div>
             ))}
           </div>

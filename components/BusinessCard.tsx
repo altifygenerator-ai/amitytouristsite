@@ -14,11 +14,12 @@ export default function BusinessCard({
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${business.name} Amity Arkansas`
   )}`;
+  const detailsUrl = `/local-business/${business.slug}`;
 
   return (
     <article className="business-card">
       <TrackedBusinessLink
-        href={business.href}
+        href={detailsUrl}
         business={business.name}
         page={page}
         placement={placement}
@@ -47,12 +48,12 @@ export default function BusinessCard({
 
         <div className="card-actions">
           <TrackedBusinessLink
-            href={business.href}
+            href={detailsUrl}
             business={business.name}
             page={page}
             placement={placement}
             placementType={business.placementType}
-            action="website"
+            action="details-page"
             className="mini-button"
           >
             Details

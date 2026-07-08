@@ -8,8 +8,19 @@ const footerGroups = [
       { href: "/", label: "Home" },
       { href: "/things-to-do", label: "Things To Do" },
       { href: "/caddo-river", label: "Caddo River" },
+      { href: "/caddo-river-access-near-amity", label: "River Access" },
       { href: "/near-glenwood", label: "Near Glenwood" },
       { href: "/history", label: "History" },
+    ],
+  },
+  {
+    title: "River & Markets",
+    links: [
+      { href: "/hwy-182-caddo-river-access", label: "Hwy 182 Access" },
+      { href: "/glenwood-to-amity-float-guide", label: "Glenwood to Amity Float" },
+      { href: "/amity-river-day-itinerary", label: "River Day Itinerary" },
+      { href: "/amity-trade-days", label: "Amity Trade Days" },
+      { href: "/events", label: "Events & Markets" },
     ],
   },
   {
@@ -17,23 +28,17 @@ const footerGroups = [
     links: [
       { href: "/restaurants", label: "Food & Drinks" },
       { href: "/local-business", label: "Local Businesses" },
-      { href: "/contact", label: "Get Listed" },
+      { href: "/contact", label: "Get Listed or Sponsor" },
+      { href: "/submit-event", label: "Submit Event" },
     ],
   },
   {
-    title: "Day Trips",
+    title: "Nearby Guides",
     links: [
       { href: "https://www.glenwoodarkansas.org", label: "Glenwood" },
       { href: "https://www.murfreesboroarkansas.org", label: "Murfreesboro" },
       { href: "https://www.mountidaarkansas.org", label: "Mount Ida" },
       { href: "https://www.hotspringsarkansas.org", label: "Hot Springs" },
-    ],
-  },
-  {
-    title: "Business",
-    links: [
-      { href: "/contact", label: "Promote Your Business" },
-      { href: "https://naturalstatetourismproject.org", label: "Natural State Tourism Project" },
     ],
   },
 ];
@@ -73,16 +78,16 @@ export default function Footer() {
           <div>
             <h3>Amity Arkansas</h3>
             <p>
-              Quiet Arkansas days near Glenwood, the Caddo River, local food, old history, small businesses, and uncrowded southwest Arkansas back roads.
+              Lower-Caddo access notes, local food, town square history, Trade Days memories, small businesses, and quiet southwest Arkansas stops near Glenwood.
             </p>
           </div>
 
           <div className="footer-brand-actions">
             <Link href="/contact" className="footer-button footer-button-light">
-              Get Listed
+              Get Listed or Sponsor
             </Link>
-            <Link href="/caddo-river" className="footer-button footer-button-outline">
-              River Guide
+            <Link href="/caddo-river-access-near-amity" className="footer-button footer-button-outline">
+              River Access Notes
             </Link>
           </div>
         </div>
@@ -107,7 +112,7 @@ export default function Footer() {
 
       <div className="container footer-bottom">
         <p>
-          © {new Date().getFullYear()} Amity Arkansas. Quiet stops, local stories, and small businesses near Glenwood and the Caddo River.
+          © {new Date().getFullYear()} Amity Arkansas. Local guide for the quieter side of the Caddo River near Glenwood.
         </p>
         <p>
           Part of the{" "}

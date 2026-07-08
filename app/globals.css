@@ -1024,3 +1024,298 @@ h3 {
     width: 100%;
   }
 }
+
+/* =====================
+   UPDATED AMITY FUNNEL UI
+===================== */
+
+.hero .container.hero-inner {
+  width: min(760px, calc(100% - 40px));
+  margin-left: max(20px, calc((100vw - 1120px) / 2));
+  margin-right: auto;
+  text-align: left;
+}
+
+.link-card {
+  display: grid;
+  gap: 12px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-strong);
+}
+
+.link-card strong,
+.feature-card-body strong {
+  color: var(--accent-dark);
+}
+
+.mini-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.four-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.pt-none {
+  padding-top: 0;
+}
+.contact-basics-card {
+  align-self: start;
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-basics-image {
+  position: relative;
+  min-height: 230px;
+  border-bottom: 1px solid var(--border);
+  background: var(--green-soft);
+}
+
+.contact-basics-image img {
+  object-fit: cover;
+}
+
+.contact-basics-body {
+  padding: 28px;
+}
+
+.contact-basics-body > p {
+  color: var(--text);
+  font-size: 1.02rem;
+  line-height: 1.72;
+}
+
+.basics-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 22px;
+}
+
+.basics-list div {
+  padding: 16px;
+  border: 1px solid rgba(31, 42, 36, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 250, 242, 0.72);
+}
+
+.basics-list strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--accent-dark);
+  font-size: 0.95rem;
+}
+
+.basics-list span {
+  display: block;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.contact-note-box {
+  margin-top: 18px;
+  padding: 18px;
+  border-radius: 20px;
+  background: #1f3b31;
+}
+
+.contact-note-box strong {
+  display: block;
+  margin-bottom: 6px;
+  color: #fffaf2;
+}
+
+.contact-note-box p {
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 0.96rem;
+  line-height: 1.55;
+}
+
+.contact-basics-actions {
+  margin-top: 20px;
+}
+.contact-split {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 42px;
+  align-items: start;
+}
+
+.form-card {
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.form-heading {
+  margin-bottom: 22px;
+}
+
+.form-heading h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.8rem, 3vw, 2.7rem);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.form-card label,
+.full-field {
+  display: block;
+}
+
+.form-card label span,
+.full-field span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--green);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+  width: 100%;
+  border: 1px solid rgba(31, 42, 36, 0.15);
+  border-radius: 16px;
+  background: #fffdfa;
+  padding: 13px 14px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-card textarea {
+  min-height: 142px;
+  resize: vertical;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+  border-color: rgba(143, 90, 49, 0.55);
+  box-shadow: 0 0 0 4px rgba(143, 90, 49, 0.1);
+}
+
+.full-field {
+  margin-top: 16px;
+}
+
+.submit-button {
+  width: 100%;
+  margin-top: 22px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #ffffff;
+  padding: 14px 22px;
+  font: inherit;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 14px 30px rgba(96, 55, 29, 0.16);
+  transition: transform 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.submit-button:hover {
+  transform: translateY(-2px);
+  background: var(--accent-dark);
+}
+
+.submit-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.68;
+}
+
+.form-message {
+  margin-top: 16px;
+  border-radius: 18px;
+  padding: 14px 16px;
+  font-weight: 850;
+}
+
+.form-message.success {
+  background: #e9f6eb;
+  color: #1d5b2c;
+}
+
+.form-message.error {
+  background: #fff0ec;
+  color: #8a2f1c;
+}
+
+.listing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.listing-card strong {
+  color: var(--accent-dark);
+  font-size: 1.25rem;
+}
+
+.listing-card .mini-button {
+  margin-top: auto;
+  align-self: flex-start;
+}
+
+.soft-note {
+  box-shadow: 0 12px 30px rgba(31, 42, 36, 0.06);
+}
+
+.source-style-card {
+  align-self: stretch;
+}
+
+.readable-article {
+  max-width: 850px;
+}
+
+.readable-article p {
+  color: var(--text);
+  font-size: 1.08rem;
+  line-height: 1.82;
+}
+
+.readable-article p + p {
+  margin-top: 22px;
+}
+
+@media (max-width: 1180px) {
+  .four-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1080px) {
+  .contact-split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero .container.hero-inner {
+    width: min(100% - 28px, 1120px);
+    margin: 0 auto;
+  }
+
+  .form-grid,
+  .mini-grid,
+  .four-grid {
+    grid-template-columns: 1fr;
+  }
+}

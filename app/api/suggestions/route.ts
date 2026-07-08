@@ -11,22 +11,19 @@ export async function POST(req: Request) {
     const body = await req.json();
 
     const payload = {
-      type: cleanField(body.type) || "advertising_request",
-      businessName: cleanField(body.businessName),
-      contactName: cleanField(body.contactName),
+      name: cleanField(body.name),
       email: cleanField(body.email),
-      phone: cleanField(body.phone),
-      businessType: cleanField(body.businessType),
-      website: cleanField(body.website),
+      suggestionType: cleanField(body.suggestionType),
+      placeName: cleanField(body.placeName),
       location: cleanField(body.location),
-      listingType: cleanField(body.listingType),
+      link: cleanField(body.link),
       message: cleanField(body.message),
       site: cleanField(body.site) || "Amity Arkansas Guide",
     };
 
-    if (!payload.businessName || !payload.contactName || !payload.email || !payload.businessType) {
+    if (!payload.suggestionType || !payload.message) {
       return NextResponse.json(
-        { error: "Please include business name, contact name, email, and business type." },
+        { error: "Please include a suggestion type and message." },
         { status: 400 }
       );
     }
@@ -35,7 +32,10 @@ export async function POST(req: Request) {
 
     if (!apiKey) {
       console.error("Missing RESEND_API_KEY");
-      return NextResponse.json({ error: "Server not configured" }, { status: 500 });
+      return NextResponse.json(
+        { error: "Server not configured" },
+        { status: 500 }
+      );
     }
 
     const { Resend } = await import("resend");
@@ -45,13 +45,16 @@ export async function POST(req: Request) {
       from: process.env.CONTACT_FROM_EMAIL ?? "promote@naturalstatetourismproject.org",
       to: process.env.NATURAL_STATE_CONTACT_EMAIL ?? "naturalstatetourismproject@gmail.com",
       bcc: "altifygenerator@gmail.com",
-      subject: `Amity Guide Listing/Sponsor Request: ${payload.businessName}`,
+      subject: `New Amity Guide Suggestion: ${payload.suggestionType}`,
       text: JSON.stringify(payload, null, 2),
     });
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: "Something went wrong" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Something went wrong" },
+      { status: 500 }
+    );
   }
 }
