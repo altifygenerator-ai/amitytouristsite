@@ -96,6 +96,21 @@ export const featuredBusinesses: FeaturedBusiness[] = [
     notes: ["Local cafe", "Small-town food stop", "Check current hours"],
     goodFor: ["Lunch stop", "Local meal", "Slow drive through town"],
   },
+    {
+    name: "Amity Thrift and Resale",
+    slug: "amity-thrift-and-resale",
+    badge: "Our Pick",
+    placementType: "editorial",
+    category: "Thrift Store • Resale Finds • Local Shopping",
+    description:
+  "Amity Thrift and Resale is a local thrift and resale shop on East Thompson Street in Amity. It is a simple, useful stop for secondhand finds, affordable goods, and visitors who want to support one of the small businesses helping keep the town active.",
+    shortDescription:
+      "Small-town thrift and resale shop with affordable finds, local character, and a real Amity feel.",
+    image: "/images/amity/amity-thrift-and-resale.jpg",
+    href: "https://www.google.com/maps/search/?api=1&query=Amity%20Thrift%20and%20Resale%20East%20Thompson%20St%20Amity%20AR%2071921",
+    notes: ["Thrift and resale shop", "Local Amity business", "Check current hours"],
+    goodFor: ["Small-town shopping", "Secondhand finds", "Slow stop in Amity"],
+  },
 ];
 
 export const riverNotes = [

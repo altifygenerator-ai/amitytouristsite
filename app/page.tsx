@@ -115,7 +115,7 @@ export default function HomePage() {
           </div>
 
           <div className="card-grid">
-            {featuredBusinesses.slice(0, 3).map((business) => (
+            {featuredBusinesses.slice(0, 4).map((business) => (
               <BusinessCard
                 key={business.name}
                 business={business}
