@@ -22,6 +22,7 @@ export const businessLinks = [
   { href: "/local-business", label: "All Local Businesses" },
   { href: "/restaurants", label: "Food & Drinks" },
   { href: "/events", label: "Events & Markets" },
+  { href: "/amity-market-date-vote", label: "Vote on Market Date" },
   { href: "/contact", label: "Get Listed" },
 ];
 

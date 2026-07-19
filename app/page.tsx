@@ -76,6 +76,17 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-tight market-vote-home-strip">
+        <div className="container market-vote-home-inner">
+          <div>
+            <span className="eyebrow small">Amity market planning</span>
+            <h2>Three possible Saturdays. One community vote.</h2>
+            <p>Vendors, locals, businesses, sponsors, and people who plan to attend can help us compare the dates before the first market is finalized.</p>
+          </div>
+          <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Market Date</Link>
+        </div>
+      </section>
+
       <section className="section section-warm">
         <div className="container split-grid">
           <div className="copy-block">

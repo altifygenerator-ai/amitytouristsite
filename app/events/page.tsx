@@ -47,8 +47,8 @@ export default function EventsPage() {
               Send real dates, vendor interest, fundraiser details, music nights, church sales, school events, food pop-ups, and sponsor questions as they come together.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
-              <Link href="/submit-event" className="btn-primary">Submit an Event Idea</Link>
-              <Link href="/amity-trade-days" className="btn-secondary">Trade Days Story</Link>
+              <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Market Date</Link>
+              <Link href="/submit-event" className="btn-secondary">Submit an Event Idea</Link>
             </div>
           </div>
           <div className="image-panel">
@@ -85,7 +85,7 @@ export default function EventsPage() {
             Send the idea. It could be a market, food pop-up, fundraiser, car meet, music night, church sale, school event, vendor day, cleanup day, or something tied to the Caddo River.
           </p>
           <div className="button-row" style={{ marginTop: 24 }}>
-            <Link href="/submit-event" className="btn-primary">Submit an Event</Link>
+            <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Date</Link>
             <Link href="/contact" className="btn-secondary">Ask About Sponsorship</Link>
           </div>
         </div>
