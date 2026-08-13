@@ -4,33 +4,12 @@ import Link from "next/link";
 import { siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Amity Events & Market Ideas | Town Square, River Days & Trade Days",
+  title: "Amity Events & Saturday Market | Amity, Arkansas",
   description:
-    "Find Amity, Arkansas event and market ideas tied to the town square, Caddo River traffic, local businesses, vendors, and a possible Trade Days-style revival.",
-  keywords: [
-    "Amity Arkansas events",
-    "Amity Arkansas market",
-    "Amity town square events",
-    "Amity Trade Days revival",
-    "Caddo River events Amity",
-  ],
+    "Follow the first Amity Saturday Market planned for September 19, 2026, plus local event submissions, vendor information, and future market ideas in Amity, Arkansas.",
+  keywords: ["Amity Arkansas events", "Amity Saturday Market", "Amity Arkansas vendors", "Amity town square events"],
   alternates: { canonical: `${siteUrl}/events` },
 };
-
-const eventIdeas = [
-  {
-    title: "Second Saturday on the Square",
-    text: "A small recurring market day would be easier to remember than one-off events. Vendors, yard-sale tables, food, old cars, local music, and kids activities could all scale up slowly.",
-  },
-  {
-    title: "River & Square Day",
-    text: "Tie the event to Caddo River traffic. People already coming toward Glenwood could stop in Amity for food, local booths, and the square before or after the river.",
-  },
-  {
-    title: "Trade Days-style weekend",
-    text: "A future version could borrow the clear idea of Amity Trade Days without pretending the old 54-acre market is instantly coming back.",
-  },
-];
 
 export default function EventsPage() {
   return (
@@ -39,20 +18,20 @@ export default function EventsPage() {
         <div className="container split-grid">
           <div className="copy-block">
             <span className="eyebrow">Events & markets</span>
-            <h1>Amity needs regular reasons for people to come into town.</h1>
+            <h1>The first Amity Saturday Market is moving forward.</h1>
             <p className="lead">
-              Markets, vendor days, square events, and river-tied weekends give people a reason to come back on purpose. The first ones do not have to be huge. They just need to be clear, local, and easy to remember.
+              Saturday, September 19 is the working date for the first trial market around the Amity town square. Vendor interest came in fast, local property owners have offered space, and the city is on board with the project moving forward.
             </p>
             <p>
-              Send real dates, vendor interest, fundraiser details, music nights, church sales, school events, food pop-ups, and sponsor questions as they come together.
+              We are still finishing the layout, vendor permit process, booth costs, electricity, and the other details that make the day run right. Vendor applications are open now with no payment due at the time of application.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
-              <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Market Date</Link>
-              <Link href="/submit-event" className="btn-secondary">Submit an Event Idea</Link>
+              <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>
+              <Link href="/amity-saturday-market/vendor-registration" className="btn-secondary">Apply as a Vendor</Link>
             </div>
           </div>
           <div className="image-panel">
-            <Image src="/images/amity/TownSquare.jpg" alt="Amity Arkansas town square for future events" fill sizes="(max-width: 900px) 100vw, 45vw" />
+            <Image src="/images/amity/TownSquare.jpg" alt="Amity Arkansas town square" fill sizes="(max-width: 900px) 100vw, 45vw" />
           </div>
         </div>
       </section>
@@ -60,32 +39,27 @@ export default function EventsPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">Possible starts</span>
-            <h2>Keep the first version simple.</h2>
+            <span className="eyebrow">More than one day</span>
+            <h2>If the first market works, there is room to build from it.</h2>
             <p className="lead">
-              The first event does not need to be huge. It needs to be clear, promoted, and repeatable enough that people know when to show up again.
+              The first event is a trial. After that, the town, vendors, businesses, and organizers can look at what worked and decide whether seasonal markets, Christmas events, or a regular schedule make sense.
             </p>
           </div>
-          <div className="card-grid">
-            {eventIdeas.map((idea) => (
-              <div key={idea.title} className="note-card">
-                <h3>{idea.title}</h3>
-                <p>{idea.text}</p>
-              </div>
-            ))}
+          <div className="three-grid">
+            <div className="note-card"><h3>Local events</h3><p>Send real dates for fundraisers, church events, school activities, food pop-ups, music, and other things happening around Amity.</p></div>
+            <div className="note-card"><h3>Vendor markets</h3><p>The September trial will give us real numbers on space, turnout, vendor needs, and what the square can comfortably support.</p></div>
+            <div className="note-card"><h3>Trade Days spirit</h3><p>Amity does not need to copy the old 54-acre market overnight. A smaller event can still give people a reason to come back into town.</p></div>
           </div>
         </div>
       </section>
 
       <section className="section section-river">
         <div className="container callout">
-          <span className="eyebrow">Vendors, churches, schools, businesses, and sponsors</span>
-          <h2>Have something that could bring people into Amity?</h2>
-          <p>
-            Send the idea. It could be a market, food pop-up, fundraiser, car meet, music night, church sale, school event, vendor day, cleanup day, or something tied to the Caddo River.
-          </p>
+          <span className="eyebrow">Have another event?</span>
+          <h2>Send it our way.</h2>
+          <p>Natural State Tourism Project can add real local events to the Amity guide as dates and details are confirmed.</p>
           <div className="button-row" style={{ marginTop: 24 }}>
-            <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Date</Link>
+            <Link href="/submit-event" className="btn-primary">Submit an Event</Link>
             <Link href="/contact" className="btn-secondary">Ask About Sponsorship</Link>
           </div>
         </div>

@@ -17,6 +17,7 @@ const routes = [
   { path: "/history", priority: 0.78, changeFrequency: "monthly" as const },
   { path: "/amity-trade-days", priority: 0.86, changeFrequency: "monthly" as const },
   { path: "/events", priority: 0.82, changeFrequency: "weekly" as const },
+  { path: "/amity-saturday-market", priority: 0.93, changeFrequency: "weekly" as const },
   { path: "/submit-event", priority: 0.58, changeFrequency: "monthly" as const },
   { path: "/contact", priority: 0.65, changeFrequency: "monthly" as const },
 ];

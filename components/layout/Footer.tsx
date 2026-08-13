@@ -21,7 +21,7 @@ const footerGroups = [
       { href: "/amity-river-day-itinerary", label: "River Day Itinerary" },
       { href: "/amity-trade-days", label: "Amity Trade Days" },
       { href: "/events", label: "Events & Markets" },
-      { href: "/amity-market-date-vote", label: "Vote on Market Date" },
+      { href: "/amity-saturday-market", label: "Amity Saturday Market" },
     ],
   },
   {

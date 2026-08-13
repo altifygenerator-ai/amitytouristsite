@@ -17,7 +17,7 @@ export async function supabaseRest<T>(
 ): Promise<T> {
   const config = getSupabaseConfig();
   if (!config) {
-    throw new Error("Market voting storage is not configured.");
+    throw new Error("Supabase storage is not configured.");
   }
 
   const response = await fetch(`${config.url}/rest/v1/${path}`, {

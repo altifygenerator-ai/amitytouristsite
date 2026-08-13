@@ -1758,3 +1758,551 @@ h3 {
   font-size: 0.9rem;
   font-weight: 850;
 }
+
+/* =====================
+   AMITY SATURDAY MARKET
+===================== */
+
+.market-event-date {
+  margin: 18px 0 8px;
+  color: var(--accent-dark);
+  font-size: 1.08rem;
+  font-weight: 900;
+}
+
+.market-event-image-note {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  left: 18px;
+  padding: 17px 20px;
+  border: 1px solid rgba(255,255,255,.28);
+  border-radius: 20px;
+  background: rgba(31,59,49,.9);
+  color: white;
+  backdrop-filter: blur(10px);
+}
+
+.market-event-image-note span,
+.market-event-image-note strong {
+  display: block;
+}
+
+.market-event-image-note span {
+  margin-bottom: 3px;
+  color: rgba(255,255,255,.72);
+  font-size: .72rem;
+  font-weight: 850;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.market-event-image-note strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+}
+
+.market-event-cards .note-card {
+  min-height: 250px;
+}
+
+.market-event-facts {
+  display: grid;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background: var(--border);
+  box-shadow: var(--shadow);
+}
+
+.market-event-facts > div {
+  display: grid;
+  grid-template-columns: 132px 1fr;
+  gap: 20px;
+  padding: 17px 20px;
+  background: rgba(255,250,242,.98);
+}
+
+.market-event-facts span {
+  color: var(--muted);
+  font-size: .78rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.market-event-facts strong {
+  color: var(--green);
+}
+
+.narrow-container {
+  width: min(840px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.vendor-registration-intro h1 {
+  max-width: 720px;
+}
+
+.vendor-registration-intro .lead {
+  margin-top: 20px;
+}
+
+.vendor-payment-pending {
+  margin: 26px 0 18px;
+  padding: 20px 22px;
+  border: 1px solid rgba(143,90,49,.2);
+  border-radius: 22px;
+  background: rgba(255,250,242,.82);
+}
+
+.vendor-payment-pending strong {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--accent-dark);
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--accent-dark);
+  font-weight: 800;
+}
+
+.vendor-registration-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(280px, .7fr);
+  gap: 32px;
+  align-items: start;
+}
+
+.vendor-application-card,
+.vendor-registration-aside,
+.market-admin-panel,
+.admin-login-card {
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  background: rgba(255,250,242,.94);
+  box-shadow: var(--shadow);
+}
+
+.vendor-application-card {
+  padding: clamp(22px, 4vw, 38px);
+}
+
+.vendor-application-card .form-heading {
+  margin-bottom: 28px;
+}
+
+.vendor-application-card .form-heading p {
+  margin-top: 10px;
+}
+
+.vendor-application-card input,
+.vendor-application-card select,
+.vendor-application-card textarea,
+.market-admin-shell input,
+.market-admin-shell select,
+.market-admin-shell textarea,
+.admin-login-card input {
+  width: 100%;
+  border: 1px solid rgba(31,42,36,.16);
+  border-radius: 15px;
+  background: #fffdfa;
+  padding: 13px 14px;
+  color: var(--text);
+  font: inherit;
+  outline: none;
+}
+
+.vendor-application-card input:focus,
+.vendor-application-card select:focus,
+.vendor-application-card textarea:focus,
+.market-admin-shell input:focus,
+.market-admin-shell select:focus,
+.market-admin-shell textarea:focus,
+.admin-login-card input:focus {
+  border-color: rgba(143,90,49,.5);
+  box-shadow: 0 0 0 4px rgba(143,90,49,.09);
+}
+
+.vendor-application-card label > span,
+.market-admin-shell label > span,
+.admin-login-card label > span {
+  display: block;
+  margin-bottom: 7px;
+  color: var(--green);
+  font-size: .88rem;
+  font-weight: 850;
+}
+
+.vendor-setup-grid {
+  margin-top: 18px;
+}
+
+.vendor-check-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.vendor-check {
+  display: flex;
+  gap: 12px;
+  min-height: 98px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(223,234,221,.32);
+  cursor: pointer;
+}
+
+.vendor-check input {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 20px;
+  margin-top: 2px;
+  accent-color: var(--accent);
+}
+
+.vendor-check span {
+  margin: 0 !important;
+}
+
+.vendor-check strong,
+.vendor-check small {
+  display: block;
+}
+
+.vendor-check strong {
+  color: var(--green);
+}
+
+.vendor-check small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.vendor-food-row {
+  grid-template-columns: 1fr;
+}
+
+.vendor-conditional-field {
+  margin-top: 4px;
+  padding: 18px;
+  border-left: 3px solid var(--accent);
+  border-radius: 0 18px 18px 0;
+  background: rgba(143,90,49,.055);
+}
+
+.vendor-terms-box {
+  margin: 24px 0 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: var(--green);
+}
+
+.vendor-terms-box strong {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.vendor-terms-box p {
+  color: rgba(255,255,255,.78);
+  font-size: .92rem;
+}
+
+.vendor-registration-aside {
+  position: sticky;
+  top: 98px;
+  padding: 28px;
+}
+
+.vendor-registration-aside h2 {
+  font-size: 2rem;
+}
+
+.vendor-side-list {
+  display: grid;
+  gap: 0;
+  margin-top: 20px;
+}
+
+.vendor-side-list > div {
+  padding: 16px 0;
+  border-top: 1px solid var(--border);
+}
+
+.vendor-side-list strong {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--green);
+}
+
+.vendor-side-list p {
+  font-size: .92rem;
+}
+
+/* =====================
+   AMITY MARKET ADMIN
+===================== */
+
+.market-admin-page,
+.admin-login-page {
+  background: #eee6d8;
+}
+
+.market-admin-shell {
+  width: min(1320px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 42px 0 80px;
+}
+
+.market-admin-topbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 26px;
+}
+
+.market-admin-topbar h1 {
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+}
+
+.market-admin-stats {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.market-admin-stats > div {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: rgba(255,250,242,.92);
+}
+
+.market-admin-stats span,
+.market-admin-detail-grid span,
+.market-admin-products > span {
+  display: block;
+  color: var(--muted);
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+}
+
+.market-admin-stats strong {
+  display: block;
+  margin-top: 4px;
+  color: var(--green);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.9rem;
+}
+
+.market-admin-panel {
+  padding: 22px;
+  margin-top: 20px;
+}
+
+.market-admin-tools {
+  display: grid;
+  grid-template-columns: minmax(220px,1fr) 200px auto auto auto;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.market-admin-vendor-list {
+  display: grid;
+  gap: 16px;
+}
+
+.market-admin-vendor-card {
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  background: white;
+}
+
+.market-admin-vendor-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.market-admin-vendor-head h2 {
+  margin-top: 8px;
+  font-size: 1.65rem;
+}
+
+.market-admin-status {
+  display: inline-flex;
+  padding: 5px 9px;
+  border-radius: 999px;
+  background: #ede8df;
+  color: var(--green);
+  font-size: .68rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.status-new { background: #fff1bd; }
+.status-confirmed { background: #d8efd9; }
+.status-waitlisted { background: #dae7f1; }
+.status-declined,
+.status-cancelled { background: #efdddd; }
+
+.market-admin-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: right;
+  font-size: .9rem;
+}
+
+.market-admin-contact a {
+  color: var(--accent-dark);
+  font-weight: 750;
+}
+
+.market-admin-detail-grid,
+.market-admin-edit-grid,
+.market-admin-email-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0,1fr));
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.market-admin-detail-grid > div {
+  min-height: 86px;
+  padding: 12px;
+  border-radius: 14px;
+  background: #faf7f1;
+}
+
+.market-admin-detail-grid strong,
+.market-admin-detail-grid small {
+  display: block;
+  margin-top: 4px;
+}
+
+.market-admin-detail-grid strong {
+  color: var(--green);
+}
+
+.market-admin-detail-grid small {
+  color: var(--muted);
+}
+
+.market-admin-products {
+  margin-top: 16px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(223,234,221,.38);
+}
+
+.market-admin-products p + p {
+  margin-top: 8px;
+}
+
+.market-admin-notes {
+  display: block;
+  margin-top: 12px;
+}
+
+.market-admin-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.market-admin-card-actions small {
+  color: var(--muted);
+}
+
+.market-admin-card-actions .btn-primary {
+  margin-left: auto;
+}
+
+.market-admin-email-panel .form-heading {
+  margin-bottom: 18px;
+}
+
+.market-admin-email-panel code {
+  padding: 2px 5px;
+  border-radius: 6px;
+  background: #eee8dd;
+}
+
+.market-admin-email-grid {
+  grid-template-columns: 260px 1fr;
+  margin-bottom: 14px;
+}
+
+.market-admin-email-status {
+  color: var(--green);
+  font-weight: 800;
+}
+
+.admin-login-page {
+  min-height: 72vh;
+  display: grid;
+  place-items: center;
+  padding: 60px 20px;
+}
+
+.admin-login-card {
+  width: min(520px, 100%);
+  padding: 34px;
+}
+
+.admin-login-card h1 {
+  font-size: 2.8rem;
+}
+
+.admin-login-card > p {
+  margin-top: 10px;
+}
+
+.admin-login-form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (max-width: 1000px) {
+  .vendor-registration-layout { grid-template-columns: 1fr; }
+  .vendor-registration-aside { position: static; }
+  .market-admin-stats { grid-template-columns: repeat(3, 1fr); }
+  .market-admin-tools { grid-template-columns: 1fr 1fr; }
+  .market-admin-detail-grid,
+  .market-admin-edit-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+
+@media (max-width: 700px) {
+  .vendor-check-grid { grid-template-columns: 1fr; }
+  .market-event-facts > div { grid-template-columns: 1fr; gap: 3px; }
+  .market-admin-topbar,
+  .market-admin-vendor-head { flex-direction: column; }
+  .market-admin-contact { text-align: left; }
+  .market-admin-stats { grid-template-columns: repeat(2, 1fr); }
+  .market-admin-tools,
+  .market-admin-detail-grid,
+  .market-admin-edit-grid,
+  .market-admin-email-grid { grid-template-columns: 1fr; }
+  .market-admin-card-actions .btn-primary { width: 100%; margin-left: 0; }
+}

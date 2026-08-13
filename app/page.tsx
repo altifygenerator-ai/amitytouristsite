@@ -79,11 +79,11 @@ export default function HomePage() {
       <section className="section-tight market-vote-home-strip">
         <div className="container market-vote-home-inner">
           <div>
-            <span className="eyebrow small">Amity market planning</span>
-            <h2>Three possible Saturdays. One community vote.</h2>
-            <p>Vendors, locals, businesses, sponsors, and people who plan to attend can help us compare the dates before the first market is finalized.</p>
+            <span className="eyebrow small">Amity Saturday Market</span>
+            <h2>The first market is moving forward.</h2>
+            <p>Saturday, September 19 is the working date. Vendor applications are open now, with final booth payment and city permit details coming by email once they are settled.</p>
           </div>
-          <Link href="/amity-market-date-vote" className="btn-primary">Vote on the Market Date</Link>
+          <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>
         </div>
       </section>
 
