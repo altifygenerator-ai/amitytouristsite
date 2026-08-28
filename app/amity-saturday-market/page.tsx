@@ -6,38 +6,95 @@ import { siteUrl } from "@/data/amity";
 export const metadata: Metadata = {
   title: "Amity Saturday Market | September 19, 2026",
   description:
-    "The first Amity Saturday Market is being planned for September 19, 2026. Follow vendor registration, sponsor information, local business updates, and event details here.",
+    "The first Amity Saturday Market is set for September 19, 2026 from 9 a.m. to 2 p.m. Follow vendor applications, sponsor support, and current event details.",
   alternates: { canonical: `${siteUrl}/amity-saturday-market` },
   openGraph: {
     title: "Amity Saturday Market | September 19, 2026",
     description:
-      "A small fall market is coming together around the Amity town square with local vendors, food, handmade goods, resale finds, and community support.",
+      "The first Amity Saturday Market is moving forward with 21 vendor applications already received, local sponsor support, and more event details being finalized.",
     url: `${siteUrl}/amity-saturday-market`,
     type: "website",
-    images: [{ url: "/images/amity/TownSquare.jpg", width: 1200, height: 630, alt: "Amity Arkansas town square" }],
+    images: [
+      {
+        url: "/images/amity/TownSquare.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Amity Arkansas town square",
+      },
+    ],
   },
+};
+
+const eventSchema = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Amity Saturday Market",
+  description:
+    "The first Amity Saturday Market, with local vendors, food and drink, handmade goods, farm and seasonal items, resale finds, and other small businesses.",
+  startDate: "2026-09-19T09:00:00-05:00",
+  endDate: "2026-09-19T14:00:00-05:00",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  url: `${siteUrl}/amity-saturday-market`,
+  image: [`${siteUrl}/images/amity/TownSquare.jpg`],
+  location: {
+    "@type": "Place",
+    name: "Amity Town Square",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Amity",
+      addressRegion: "AR",
+      postalCode: "71921",
+      addressCountry: "US",
+    },
+  },
+  organizer: {
+    "@type": "Organization",
+    name: "Natural State Tourism Project",
+    url: "https://naturalstatetourismproject.org",
+  },
+  sponsor: [
+    {
+      "@type": "Person",
+      name: "Kay Stewart",
+      affiliation: {
+        "@type": "Organization",
+        name: "Partners Realty - Glenwood",
+      },
+    },
+    {
+      "@type": "Organization",
+      name: "Partners Realty - Glenwood",
+    },
+  ],
 };
 
 export default function AmitySaturdayMarketPage() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }}
+      />
+
       <section className="section section-warm market-event-hero">
         <div className="container split-grid">
           <div className="copy-block">
-            <span className="eyebrow">First market trial</span>
+            <span className="eyebrow">First Amity market</span>
             <h1>Amity Saturday Market</h1>
             <p className="market-event-date">Saturday, September 19, 2026 · 9 a.m.–2 p.m.</p>
             <p className="lead">
-              The first Amity market is moving forward. We’re building a vendor lineup, working through the town-square layout, and giving local businesses and folks around the area a reason to spend a Saturday in Amity again.
+              The first Amity market is moving forward, and the response has already been stronger than we expected. We have 21 unique vendor applications in so far and are working through the final town-square layout, vendor placement, permits, parking, and day-of details.
             </p>
             <p>
-              Vendor applications are open now. Payment is not due with the application while the final booth and City of Amity vendor-permit details are being worked out.
+              Vendor applications are still open while space is available. There is no payment due with the application. Approved vendors will receive the final booth cost, City of Amity permit information, setup instructions, and payment details before their space is confirmed.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
               <Link href="/amity-saturday-market/vendor-registration" className="btn-primary">Apply as a Vendor</Link>
               <Link href="/contact" className="btn-secondary">Ask About Sponsoring</Link>
             </div>
           </div>
+
           <div className="image-panel market-event-image">
             <Image
               src="/images/amity/TownSquare.jpg"
@@ -47,8 +104,8 @@ export default function AmitySaturdayMarketPage() {
               sizes="(max-width: 900px) 100vw, 45vw"
             />
             <div className="market-event-image-note">
-              <span>Working event date</span>
-              <strong>September 19</strong>
+              <span>Market day</span>
+              <strong>September 19 · 9–2</strong>
             </div>
           </div>
         </div>
@@ -57,27 +114,36 @@ export default function AmitySaturdayMarketPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">What we’re building</span>
-            <h2>Small enough to run well. Big enough to feel like something is happening.</h2>
+            <span className="eyebrow">Where things stand</span>
+            <h2>Twenty-one vendor applications and counting.</h2>
             <p className="lead">
-              The first market is being planned around the square and participating private property. The idea is a good mix of handmade goods, food, farm and homestead products, resale finds, local services, and existing Amity businesses.
+              The goal is still the same: keep the first one manageable, give people a good reason to come into Amity for the day, and put together a mix that is worth visiting instead of filling spaces just to fill them.
             </p>
           </div>
+
           <div className="three-grid market-event-cards">
             <article className="note-card">
-              <span className="eyebrow small">Vendors</span>
-              <h3>A real mix</h3>
-              <p>Handmade work, quilts, jewelry, farm goods, seasonal items, food, resale, soaps, clothing, crafts, and more are already represented in the interest list.</p>
+              <span className="eyebrow small">Vendor mix</span>
+              <h3>Plenty of variety already</h3>
+              <p>
+                Applications already cover food and drinks, handmade goods, jewelry, crafts, farm and seasonal items, resale, boutique goods, local services, and more. We’ll share more of the confirmed lineup as vendor details are finalized.
+              </p>
             </article>
+
             <article className="note-card">
               <span className="eyebrow small">Local businesses</span>
-              <h3>Keep the spending in town</h3>
-              <p>The market is being planned to work with the businesses already here, not around them. Food, shopping, and local stops should be part of the day.</p>
+              <h3>Keep some of the day in Amity</h3>
+              <p>
+                The market is being planned to work with the businesses already here, not around them. We want visitors to have a reason to shop the market and still stop for food, shopping, and other local places while they are in town.
+              </p>
             </article>
+
             <article className="note-card">
               <span className="eyebrow small">First run</span>
-              <h3>Learn what works</h3>
-              <p>This is a trial event. We’ll use the first market to learn what the square can comfortably hold, what vendors need, and what makes sense for future dates.</p>
+              <h3>Build something worth repeating</h3>
+              <p>
+                This is the first trial market. We’ll use it to learn what the square comfortably holds, what vendors need, how traffic and parking work, and what makes sense if Amity wants to do more days like it later.
+              </p>
             </article>
           </div>
         </div>
@@ -86,39 +152,89 @@ export default function AmitySaturdayMarketPage() {
       <section className="section section-river">
         <div className="container split-grid market-event-details">
           <div className="copy-block">
-            <span className="eyebrow">Vendor applications</span>
-            <h2>Want to set up?</h2>
+            <span className="eyebrow">Plan for September 19</span>
+            <h2>What visitors and vendors should know right now.</h2>
             <p className="lead">
-              Apply now so we can plan the vendor mix, electricity, booth sizes, food-trailer space, and the final layout.
+              The date and public market hours are set. The smaller operational pieces are being worked through now, and this page will stay updated as they are confirmed.
             </p>
             <p>
-              There is no payment due today. Approved vendors will receive the final booth cost, city permit instructions, payment details, setup time, and rules by email before a space is confirmed.
+              Vendors should bring their own canopy, tables, and chairs unless another arrangement has been made. Electricity is limited and needs to be requested ahead of time. Booth placement, vendor arrival times, parking instructions, and the final vendor packet will be sent directly to approved vendors.
             </p>
             <div className="button-row" style={{ marginTop: 24 }}>
               <Link href="/amity-saturday-market/vendor-registration" className="btn-primary">Open Vendor Application</Link>
             </div>
           </div>
+
           <div className="market-event-facts">
-            <div><span>Date</span><strong>September 19, 2026</strong></div>
-            <div><span>Time</span><strong>9 a.m.–2 p.m.</strong></div>
+            <div><span>Date</span><strong>Saturday, September 19, 2026</strong></div>
+            <div><span>Public hours</span><strong>9 a.m.–2 p.m.</strong></div>
             <div><span>Area</span><strong>Amity town square</strong></div>
+            <div><span>Applications received</span><strong>21 unique vendors</strong></div>
+            <div><span>Booth planning</span><strong>10×10 standard; trailers/larger needs by application</strong></div>
             <div><span>Vendor setup</span><strong>Bring your own canopy, tables & chairs</strong></div>
             <div><span>Electricity</span><strong>Limited, by request</strong></div>
-            <div><span>Payment</span><strong>Details coming by email</strong></div>
+            <div><span>City vendor permit</span><strong>$25 if needed; coordinated with approved vendors</strong></div>
+            <div><span>Vendor payment</span><strong>No payment due with application</strong></div>
           </div>
         </div>
       </section>
 
       <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Early event sponsor</span>
+            <h2>Local support is already helping get the first market off the ground.</h2>
+            <p>
+              A first event has a lot of little costs behind it. Sponsor help lets us put more of the work toward making the day easier on vendors and better for the people who come out.
+            </p>
+          </div>
+
+          <div className="two-grid">
+            <article className="note-card">
+              <span className="eyebrow small">Vendor permit sponsor</span>
+              <h3>Kay Stewart · Partners Realty - Glenwood</h3>
+              <p>
+                Kay Stewart with Partners Realty - Glenwood has committed $250 toward City of Amity vendor permit costs for the first market. That support will help cover permits for vendors who need them and make it a little easier for small vendors to take part in the first event.
+              </p>
+              <p>
+                The City of Amity vendor permit is $25 for vendors who need one. We’re coordinating that process with the city, and approved vendors will be told exactly how their permit is being handled and what, if anything, they still need to pay before the event.
+              </p>
+              <div className="button-row" style={{ marginTop: 20 }}>
+                <a
+                  href="https://www.realtor.com/realestateagents/Kay-Stewart_Glenwood_AR_100672898_893009378"
+                  className="btn-secondary"
+                  target="_blank"
+                  rel="sponsored noopener noreferrer"
+                >
+                  Kay Stewart · Partners Realty - Glenwood
+                </a>
+              </div>
+            </article>
+
+            <article className="note-card">
+              <span className="eyebrow small">More help welcome</span>
+              <h3>There are still practical pieces businesses can help with.</h3>
+              <p>
+                We’re still talking with local and area businesses about signs, printing, promotion, supplies, setup, cleanup, and other pieces that help the first market run smoothly. Sponsorship does not have to be huge to be useful.
+              </p>
+              <div className="button-row" style={{ marginTop: 20 }}>
+                <Link href="/contact" className="btn-secondary">Ask About Sponsoring</Link>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-warm">
         <div className="container callout">
-          <span className="eyebrow">Businesses & sponsors</span>
-          <h2>Want to help make the first one a good one?</h2>
+          <span className="eyebrow">Still being finalized</span>
+          <h2>We’ll keep this page current as the event gets closer.</h2>
           <p>
-            We’re talking with local and area businesses about sponsorship, printing, signs, promotion, and other practical pieces that help a first event run well. If your business wants to be involved, reach out and we’ll talk through what makes sense.
+            The final booth map, vendor arrival and setup times, parking details, confirmed vendor lineup, and any other day-of information will be added or sent out as those pieces are finished. If you have already applied, there is no need to submit another application.
           </p>
           <div className="button-row" style={{ marginTop: 24 }}>
-            <Link href="/contact" className="btn-primary">Ask About Sponsoring</Link>
-            <Link href="/amity-trade-days" className="btn-secondary">Read About Amity Trade Days</Link>
+            <Link href="/amity-saturday-market/vendor-registration" className="btn-primary">Vendor Information</Link>
+            <Link href="/events" className="btn-secondary">See Amity Events</Link>
           </div>
         </div>
       </section>
