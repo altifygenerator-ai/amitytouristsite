@@ -34,7 +34,7 @@ If these existing Resend settings are present, applicants receive a confirmation
 - `CONTACT_FROM_EMAIL`
 - `NATURAL_STATE_CONTACT_EMAIL`
 
-The admin dashboard can later send the finalized payment / City permit instructions to approved vendors.
+The admin dashboard can send the finalized $25 market-fee instructions and City Hall permit-pickup details to approved vendors.
 
 ## Routes
 
@@ -51,4 +51,4 @@ Admin dashboard:
 `/admin/amity-market`
 
 ## Payment behavior
-No payment is collected by this build. New applications start with payment and City permit details marked as pending. Once the final fee structure is settled, use the admin email panel to send instructions and update each vendor's payment/permit status.
+No payment is collected by this build. Approved vendors pay one flat $25 market fee. Natural State Tourism Project covers the City of Amity vendor permit cost for approved vendors who need one; those vendors only need to pick up the permit at Amity City Hall. Use the admin email panel to send payment, pickup, and setup instructions and update each vendor's payment/permit status.

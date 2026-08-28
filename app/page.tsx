@@ -81,7 +81,7 @@ export default function HomePage() {
           <div>
             <span className="eyebrow small">Amity Saturday Market</span>
             <h2>The first market is moving forward.</h2>
-            <p>Saturday, September 19 is the working date. Vendor applications are open now, with final booth payment and city permit details coming by email once they are settled.</p>
+            <p>Saturday, September 19 is set for 9 a.m.–2 p.m. Vendor applications are open now. Approved vendors pay one flat $25 market fee, with City permit costs covered by the event and pickup handled through Amity City Hall.</p>
           </div>
           <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>
         </div>

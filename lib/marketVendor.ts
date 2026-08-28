@@ -99,8 +99,8 @@ export function paymentStatusLabel(status: MarketPaymentStatus) {
 export function permitStatusLabel(status: MarketPermitStatus) {
   const labels: Record<MarketPermitStatus, string> = {
     pending_details: "Details Pending",
-    vendor_responsible: "Vendor Responsible",
-    sponsor_covered: "Sponsor Covered",
+    vendor_responsible: "Pickup Required",
+    sponsor_covered: "Cost Covered",
     paid: "Paid",
     not_required: "Not Required",
   };

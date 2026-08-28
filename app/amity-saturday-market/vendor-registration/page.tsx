@@ -23,7 +23,7 @@ export default function VendorRegistrationPage() {
           <div className="vendor-payment-pending">
             <strong>No payment is due with this application.</strong>
             <p>
-              We’re finalizing the booth charge and the City of Amity’s $25 vendor-permit process. Approved vendors will get the final amount and payment instructions by email before anything is due.
+              There is no payment due with the application. Approved vendors will pay one flat $25 market fee per booth. There is no additional City of Amity permit charge to approved vendors for this first market. Natural State Tourism Project will cover the permit cost, and vendors who need one will pick it up from Amity City Hall before market day.
             </p>
           </div>
           <Link href="/amity-saturday-market" className="text-link">← Back to market details</Link>
@@ -42,7 +42,8 @@ export default function VendorRegistrationPage() {
               <div><strong>Power is limited</strong><p>If you need electricity, tell us exactly what you plan to plug in so we can place powered booths carefully.</p></div>
               <div><strong>Food vendors</strong><p>Food trucks and food booths are welcome to apply. We’ll follow up about space and any permit requirements that apply to your setup.</p></div>
               <div><strong>Direct sales</strong><p>We plan to limit duplicate direct-sales companies so two vendors are not selling the exact same brand.</p></div>
-              <div><strong>Confirmation comes later</strong><p>An application puts you in the review list. Your booth is confirmed after approval and the final payment/permit steps are completed.</p></div>
+              <div><strong>Simple $25 market fee</strong><p>An application puts you in the review list. Approved vendors pay one flat $25 market fee per booth. There is no separate City permit charge to the vendor for this first market.</p></div>
+              <div><strong>Permit pickup</strong><p>If you need a City of Amity vendor permit, Natural State Tourism Project will cover the cost and send you pickup details. You will just need to pick it up from Amity City Hall before the market.</p></div>
             </div>
           </aside>
         </div>

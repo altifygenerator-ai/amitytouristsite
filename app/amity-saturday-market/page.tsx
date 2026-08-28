@@ -6,12 +6,12 @@ import { siteUrl } from "@/data/amity";
 export const metadata: Metadata = {
   title: "Amity Saturday Market | September 19, 2026",
   description:
-    "The first Amity Saturday Market is set for September 19, 2026 from 9 a.m. to 2 p.m. Follow vendor applications, sponsor support, and current event details.",
+    "The first Amity Saturday Market is set for September 19, 2026 from 9 a.m. to 2 p.m. See current vendor information, the $25 market fee, event-covered City of Amity permits, sponsor support, and event updates.",
   alternates: { canonical: `${siteUrl}/amity-saturday-market` },
   openGraph: {
     title: "Amity Saturday Market | September 19, 2026",
     description:
-      "The first Amity Saturday Market is moving forward with 21 vendor applications already received, local sponsor support, and more event details being finalized.",
+      "The first Amity Saturday Market is moving forward with 21 vendor applications, a simple $25 vendor fee, City permit costs covered for approved vendors, and more event details being finalized.",
     url: `${siteUrl}/amity-saturday-market`,
     type: "website",
     images: [
@@ -87,7 +87,7 @@ export default function AmitySaturdayMarketPage() {
               The first Amity market is moving forward, and the response has already been stronger than we expected. We have 21 unique vendor applications in so far and are working through the final town-square layout, vendor placement, permits, parking, and day-of details.
             </p>
             <p>
-              Vendor applications are still open while space is available. There is no payment due with the application. Approved vendors will receive the final booth cost, City of Amity permit information, setup instructions, and payment details before their space is confirmed.
+              Vendor applications are still open while space is available, and there is no payment due with the application. Approved vendors will pay one flat $25 market fee per booth. Natural State Tourism Project will handle and cover the City of Amity vendor permit cost for approved vendors who need one; those vendors will only need to pick up their permit from Amity City Hall before the market.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
               <Link href="/amity-saturday-market/vendor-registration" className="btn-primary">Apply as a Vendor</Link>
@@ -160,6 +160,9 @@ export default function AmitySaturdayMarketPage() {
             <p>
               Vendors should bring their own canopy, tables, and chairs unless another arrangement has been made. Electricity is limited and needs to be requested ahead of time. Booth placement, vendor arrival times, parking instructions, and the final vendor packet will be sent directly to approved vendors.
             </p>
+            <p>
+              The vendor fee is a flat $25 per booth for market space, organization, and promotion. There is no additional City of Amity permit charge to approved vendors for this first market. Natural State Tourism Project will cover the permit cost, and vendors who need one will simply pick it up from Amity City Hall before market day.
+            </p>
             <div className="button-row" style={{ marginTop: 24 }}>
               <Link href="/amity-saturday-market/vendor-registration" className="btn-primary">Open Vendor Application</Link>
             </div>
@@ -173,8 +176,9 @@ export default function AmitySaturdayMarketPage() {
             <div><span>Booth planning</span><strong>10×10 standard; trailers/larger needs by application</strong></div>
             <div><span>Vendor setup</span><strong>Bring your own canopy, tables & chairs</strong></div>
             <div><span>Electricity</span><strong>Limited, by request</strong></div>
-            <div><span>City vendor permit</span><strong>$25 if needed; coordinated with approved vendors</strong></div>
-            <div><span>Vendor payment</span><strong>No payment due with application</strong></div>
+            <div><span>Market vendor fee</span><strong>$25 per approved vendor / booth</strong></div>
+            <div><span>City vendor permit</span><strong>Cost covered by the event; pickup at Amity City Hall</strong></div>
+            <div><span>Vendor payment</span><strong>No payment due with application; payment comes after approval</strong></div>
           </div>
         </div>
       </section>
@@ -194,10 +198,13 @@ export default function AmitySaturdayMarketPage() {
               <span className="eyebrow small">Vendor permit sponsor</span>
               <h3>Kay Stewart · Partners Realty - Glenwood</h3>
               <p>
-                Kay Stewart with Partners Realty - Glenwood has committed $250 toward City of Amity vendor permit costs for the first market. That support will help cover permits for vendors who need them and make it a little easier for small vendors to take part in the first event.
+                Kay Stewart with Partners Realty - Glenwood has committed $250 toward City of Amity vendor permit costs for the first market. City permit costs for approved vendors are being covered for the first Amity Saturday Market, made possible in part by Kay and Partners Realty - Glenwood.
               </p>
               <p>
-                The City of Amity vendor permit is $25 for vendors who need one. We’re coordinating that process with the city, and approved vendors will be told exactly how their permit is being handled and what, if anything, they still need to pay before the event.
+                For this first market, vendors will not be charged separately for the City of Amity permit. Natural State Tourism Project will use Kay’s sponsorship first and market/event funds as needed to cover permit costs for approved vendors who need one. Every approved vendor simply pays the same $25 market fee.
+              </p>
+              <p>
+                Once a vendor is approved, we’ll collect the $25 market fee, confirm whether a City of Amity permit needs to be prepared, and send pickup and booth-confirmation details directly. Vendors who need a permit will pick it up from Amity City Hall before the market.
               </p>
               <div className="button-row" style={{ marginTop: 20 }}>
                 <a

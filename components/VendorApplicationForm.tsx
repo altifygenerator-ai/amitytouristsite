@@ -35,7 +35,7 @@ export default function VendorApplicationForm() {
       if (!response.ok) throw new Error(result.error || "The application could not be submitted.");
 
       setStatus("success");
-      setMessage("Got it. Your vendor application is in. We’ll email the final payment, permit, and setup details once those are finished.");
+      setMessage("Got it. Your vendor application is in. If approved, we’ll email the $25 market-fee payment, City Hall permit-pickup, and setup details.");
       form.reset();
       setNeedsElectricity(false);
       setIsFoodVendor(false);
@@ -52,7 +52,7 @@ export default function VendorApplicationForm() {
         <span className="eyebrow small">Vendor application</span>
         <h2>Tell us what you’d like to bring.</h2>
         <p>
-          There is no payment due with this form. We’re finalizing the booth and city permit details now and will email approved vendors before anything is due.
+          There is no payment due with this form. Approved vendors will pay one flat $25 market fee per booth. There is no additional City of Amity permit charge to approved vendors for this first market. Natural State Tourism Project will cover the permit cost, and vendors who need one will pick it up from Amity City Hall before market day.
         </p>
       </div>
 
@@ -165,7 +165,7 @@ export default function VendorApplicationForm() {
       <div className="vendor-terms-box">
         <strong>Before you submit</strong>
         <p>
-          Sending this form does not guarantee a booth. Approved vendors will receive final booth cost, City of Amity permit instructions, payment details, setup times, and event rules by email before their space is confirmed.
+          Sending this form does not guarantee a booth. Approved vendors will receive $25 market-fee payment instructions, City Hall permit-pickup details if needed, setup times, and event rules by email before their space is confirmed.
         </p>
       </div>
 

@@ -20,10 +20,10 @@ export default function EventsPage() {
             <span className="eyebrow">Events & markets</span>
             <h1>The first Amity Saturday Market is moving forward.</h1>
             <p className="lead">
-              Saturday, September 19 is the working date for the first trial market around the Amity town square. Vendor interest came in fast, local property owners have offered space, and the city is on board with the project moving forward.
+              Saturday, September 19 from 9 a.m. to 2 p.m. is set for the first trial market around the Amity town square. Vendor interest came in fast, local property owners have offered space, and the city is on board with the project moving forward.
             </p>
             <p>
-              We are still finishing the layout, vendor permit process, booth costs, electricity, and the other details that make the day run right. Vendor applications are open now with no payment due at the time of application.
+              We are still finishing the layout, vendor placement, electricity, parking, and the other details that make the day run right. Approved vendors pay one flat $25 market fee. City permit costs are covered by the event, with permit pickup handled through Amity City Hall.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
               <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>

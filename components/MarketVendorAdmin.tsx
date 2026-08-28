@@ -38,7 +38,7 @@ export default function MarketVendorAdmin() {
   const [emailTarget, setEmailTarget] = useState("approved");
   const [emailSubject, setEmailSubject] = useState("Amity Saturday Market vendor update");
   const [emailMessage, setEmailMessage] = useState(
-    "Hi {{name}},\n\nWe have an update for vendors for the Amity Saturday Market.\n\n[Add the final payment, permit, deadline, and setup information here.]\n\nThank you,\nNatural State Tourism Project",
+    "Hi {{name}},\n\nWe have an update for vendors for the Amity Saturday Market.\n\n[Add the $25 market-fee payment, City Hall permit-pickup if needed, deadline, and setup information here.]\n\nThank you,\nNatural State Tourism Project",
   );
   const [emailStatus, setEmailStatus] = useState("");
   const [emailSending, setEmailSending] = useState(false);
@@ -266,7 +266,7 @@ export default function MarketVendorAdmin() {
       <section className="market-admin-panel market-admin-email-panel">
         <div className="form-heading">
           <span className="eyebrow small">Vendor email</span>
-          <h2>Send the payment or permit update later.</h2>
+          <h2>Send the payment or permit-pickup update later.</h2>
           <p>When the final cost is settled, choose a vendor group, replace the bracketed text, and send the same update without rebuilding the site. Use <code>{"{{name}}"}</code> or <code>{"{{business}}"}</code> for personalization.</p>
         </div>
         <div className="market-admin-email-grid">
