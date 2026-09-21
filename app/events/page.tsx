@@ -4,9 +4,9 @@ import Link from "next/link";
 import { siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Amity Events & Saturday Market | Amity, Arkansas",
+  title: "Amity Events & Market Updates | Amity, Arkansas",
   description:
-    "Follow the first Amity Saturday Market planned for September 19, 2026, plus local event submissions, vendor information, and future market ideas in Amity, Arkansas.",
+    "Find Amity, Arkansas event updates, submit local events, and follow the Amity Saturday Market project. The September 19, 2026 market was postponed and no replacement date has been announced.",
   keywords: ["Amity Arkansas events", "Amity Saturday Market", "Amity Arkansas vendors", "Amity town square events"],
   alternates: { canonical: `${siteUrl}/events` },
 };
@@ -18,16 +18,16 @@ export default function EventsPage() {
         <div className="container split-grid">
           <div className="copy-block">
             <span className="eyebrow">Events & markets</span>
-            <h1>The first Amity Saturday Market is moving forward.</h1>
+            <h1>The September 19 market was postponed.</h1>
             <p className="lead">
-              Saturday, September 19 from 9 a.m. to 2 p.m. is set for the first trial market around the Amity town square. Vendor interest came in fast, local property owners have offered space, and the city is on board with the project moving forward.
+              The first Amity Saturday Market did not move forward on September 19 as originally planned. The market project is paused while timing and logistics are revisited, and no replacement date has been announced yet.
             </p>
             <p>
-              We are still finishing the layout, vendor placement, electricity, parking, and the other details that make the day run right. Approved vendors pay one flat $25 market fee. City permit costs are covered by the event, with permit pickup handled through Amity City Hall.
+              New vendor applications are paused for now. The market page will stay online so the project has one clear place for future updates instead of leaving old event information scattered around the site.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
-              <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>
-              <Link href="/amity-saturday-market/vendor-registration" className="btn-secondary">Apply as a Vendor</Link>
+              <Link href="/amity-saturday-market" className="btn-primary">Read the Market Update</Link>
+              <Link href="/submit-event" className="btn-secondary">Submit Another Local Event</Link>
             </div>
           </div>
           <div className="image-panel">
@@ -39,25 +39,34 @@ export default function EventsPage() {
       <section className="section">
         <div className="container">
           <div className="section-heading">
-            <span className="eyebrow">More than one day</span>
-            <h2>If the first market works, there is room to build from it.</h2>
+            <span className="eyebrow">What happens next</span>
+            <h2>Keep the event calendar useful even while the market is paused.</h2>
             <p className="lead">
-              The first event is a trial. After that, the town, vendors, businesses, and organizers can look at what worked and decide whether seasonal markets, Christmas events, or a regular schedule make sense.
+              The Amity guide can still help people find real local dates. Fundraisers, church events, school activities, food pop-ups, music, community days, and future market plans can all be added as details are confirmed.
             </p>
           </div>
           <div className="three-grid">
-            <div className="note-card"><h3>Local events</h3><p>Send real dates for fundraisers, church events, school activities, food pop-ups, music, and other things happening around Amity.</p></div>
-            <div className="note-card"><h3>Vendor markets</h3><p>The September trial will give us real numbers on space, turnout, vendor needs, and what the square can comfortably support.</p></div>
-            <div className="note-card"><h3>Trade Days spirit</h3><p>Amity does not need to copy the old 54-acre market overnight. A smaller event can still give people a reason to come back into town.</p></div>
+            <div className="note-card">
+              <h3>Local events</h3>
+              <p>Send confirmed dates and public details for events happening in or around Amity so visitors and residents have one more place to find them.</p>
+            </div>
+            <div className="note-card">
+              <h3>Future market updates</h3>
+              <p>The Saturday Market project can be revisited later without pretending an old date is still active. Any new date will be posted only after it is actually confirmed.</p>
+            </div>
+            <div className="note-card">
+              <h3>Trade Days spirit</h3>
+              <p>Amity does not need to recreate the old 54-acre market overnight. Smaller events can still give people a reason to come back into town when the timing is right.</p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="section section-river">
         <div className="container callout">
-          <span className="eyebrow">Have another event?</span>
-          <h2>Send it our way.</h2>
-          <p>Natural State Tourism Project can add real local events to the Amity guide as dates and details are confirmed.</p>
+          <span className="eyebrow">Have an event to add?</span>
+          <h2>Send the confirmed details.</h2>
+          <p>Natural State Tourism Project can add real local events to the Amity guide as dates, locations, and public details are confirmed.</p>
           <div className="button-row" style={{ marginTop: 24 }}>
             <Link href="/submit-event" className="btn-primary">Submit an Event</Link>
             <Link href="/contact" className="btn-secondary">Ask About Sponsorship</Link>

@@ -5,6 +5,8 @@ import { getSupabaseConfig, supabaseRest } from "@/lib/supabaseRest";
 
 export const dynamic = "force-dynamic";
 
+const VENDOR_APPLICATIONS_PAUSED = true;
+
 function cleanText(value: unknown, maxLength: number) {
   if (typeof value !== "string") return "";
   return value.trim().replace(/\s+/g, " ").slice(0, maxLength);
@@ -82,11 +84,9 @@ async function sendApplicationEmails(payload: {
         text: [
           `Hi ${payload.contactName},`,
           "",
-          "Thanks for putting your name in for the first Amity Saturday Market.",
+          "Thanks for applying for the Amity Saturday Market.",
           "",
-          "We have your application, and there is nothing to pay today. Approved vendors will pay one flat $25 market fee per booth. There is no additional City of Amity permit charge to approved vendors for this first market. Natural State Tourism Project will cover the permit cost, and vendors who need one will pick it up from Amity City Hall before market day. Approved vendors will get payment instructions, permit-pickup details, setup rules, and booth confirmation by email.",
-          "",
-          "The market is scheduled for Saturday, September 19, 2026 from 9 a.m. to 2 p.m.",
+          "We have your application. No payment or permit action is due until a market date and the related event details are confirmed. If applications are reopened for a future market, current fee, permit, setup, and schedule information will be sent with that event's approval details.",
           "",
           "Natural State Tourism Project",
           "Amity Arkansas Guide",
@@ -99,6 +99,16 @@ async function sendApplicationEmails(payload: {
 }
 
 export async function POST(request: NextRequest) {
+  if (VENDOR_APPLICATIONS_PAUSED) {
+    return NextResponse.json(
+      {
+        error:
+          "Vendor applications are currently paused because the September 19 market was postponed and no replacement date has been announced.",
+      },
+      { status: 503 },
+    );
+  }
+
   if (!sameOrigin(request)) {
     return NextResponse.json({ error: "Invalid request origin." }, { status: 403 });
   }

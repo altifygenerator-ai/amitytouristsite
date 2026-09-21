@@ -79,11 +79,13 @@ export default function HomePage() {
       <section className="section-tight market-vote-home-strip">
         <div className="container market-vote-home-inner">
           <div>
-            <span className="eyebrow small">Amity Saturday Market</span>
-            <h2>The first market is moving forward.</h2>
-            <p>Saturday, September 19 is set for 9 a.m.–2 p.m. Vendor applications are open now. Approved vendors pay one flat $25 market fee, with City permit costs covered by the event and pickup handled through Amity City Hall.</p>
+            <span className="eyebrow small">Amity Saturday Market update</span>
+            <h2>The market project is postponed for now.</h2>
+            <p>
+              The September 19 market did not move forward as planned. No replacement date has been announced yet, and new vendor applications are paused while the project is revisited.
+            </p>
           </div>
-          <Link href="/amity-saturday-market" className="btn-primary">See Market Details</Link>
+          <Link href="/amity-saturday-market" className="btn-primary">Read the Market Update</Link>
         </div>
       </section>
 
@@ -137,12 +139,8 @@ export default function HomePage() {
           </div>
 
           <div className="button-row" style={{ marginTop: 28 }}>
-            <Link href="/local-business" className="btn-dark">
-              View Local Stops
-            </Link>
-            <Link href="/contact" className="btn-secondary">
-              Add or Sponsor a Business
-            </Link>
+            <Link href="/local-business" className="btn-dark">View Local Stops</Link>
+            <Link href="/contact" className="btn-secondary">Add or Sponsor a Business</Link>
           </div>
         </div>
       </section>
@@ -235,15 +233,11 @@ export default function HomePage() {
           <span className="eyebrow">For Amity businesses, vendors, and sponsors</span>
           <h2>Glenwood visitors are already close. Give them a reason to stop.</h2>
           <p>
-            Add a business, sponsor a local guide section, send an event idea, or help build a market day that brings people back toward the square. Clear information makes it easier for visitors to spend local.
+            Add a business, sponsor a local guide section, send an event idea, or help build a future market day that brings people back toward the square. Clear information makes it easier for visitors to spend local.
           </p>
           <div className="button-row" style={{ marginTop: 24 }}>
-            <Link href="/contact" className="btn-primary">
-              Get Listed or Sponsor
-            </Link>
-            <Link href="/events" className="btn-secondary">
-              Events & Market Ideas
-            </Link>
+            <Link href="/contact" className="btn-primary">Get Listed or Sponsor</Link>
+            <Link href="/events" className="btn-secondary">Events & Market Ideas</Link>
           </div>
         </div>
       </section>

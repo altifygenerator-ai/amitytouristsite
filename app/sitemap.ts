@@ -1,6 +1,8 @@
 import type { MetadataRoute } from "next";
 import { featuredBusinesses, siteUrl } from "@/data/amity";
 
+const LAST_CONTENT_REVIEW = new Date("2026-09-20T12:00:00-05:00");
+
 const routes = [
   { path: "", priority: 1, changeFrequency: "weekly" as const },
   { path: "/things-to-do", priority: 0.88, changeFrequency: "weekly" as const },
@@ -17,7 +19,7 @@ const routes = [
   { path: "/history", priority: 0.78, changeFrequency: "monthly" as const },
   { path: "/amity-trade-days", priority: 0.86, changeFrequency: "monthly" as const },
   { path: "/events", priority: 0.82, changeFrequency: "weekly" as const },
-  { path: "/amity-saturday-market", priority: 0.93, changeFrequency: "weekly" as const },
+  { path: "/amity-saturday-market", priority: 0.7, changeFrequency: "monthly" as const },
   { path: "/submit-event", priority: 0.58, changeFrequency: "monthly" as const },
   { path: "/contact", priority: 0.65, changeFrequency: "monthly" as const },
 ];
@@ -25,14 +27,14 @@ const routes = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = routes.map((route) => ({
     url: `${siteUrl}${route.path}`,
-    lastModified: new Date(),
+    lastModified: LAST_CONTENT_REVIEW,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 
   const businessRoutes: MetadataRoute.Sitemap = featuredBusinesses.map((business) => ({
     url: `${siteUrl}/local-business/${business.slug}`,
-    lastModified: new Date(),
+    lastModified: LAST_CONTENT_REVIEW,
     changeFrequency: "monthly",
     priority: 0.74,
   }));
