@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BusinessCard from "@/components/BusinessCard";
+import RiverViewCabinsHomeAd from "@/components/RiverViewCabinsHomeAd";
 import {
   faqs,
   featuredBusinesses,
@@ -75,6 +76,8 @@ export default function HomePage() {
           ))}
         </div>
       </section>
+
+      <RiverViewCabinsHomeAd />
 
       <section className="section-tight market-vote-home-strip">
         <div className="container market-vote-home-inner">
