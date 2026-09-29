@@ -76,6 +76,36 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="section-tight">
+        <div className="container">
+          <div
+            className="callout"
+            style={{
+              background: "linear-gradient(135deg, #1c1917 0%, #292524 60%, #78350f 100%)",
+              color: "white",
+            }}
+          >
+            <span className="eyebrow small" style={{ color: "#fcd34d" }}>
+              Featured Cabin Partner
+            </span>
+            <h2 style={{ color: "white" }}>River View Cabins on the Ouachita River</h2>
+            <p style={{ color: "rgba(255,255,255,0.86)" }}>
+              14 riverfront cabins with river views, hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and built-in fireplaces available November through March.
+            </p>
+            <div className="button-row" style={{ marginTop: 22 }}>
+              <a
+                href="https://riverviewcabins.com/"
+                target="_blank"
+                rel="sponsored noopener noreferrer"
+                className="btn-primary"
+              >
+                Visit River View Cabins ↗
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section-tight market-vote-home-strip">
         <div className="container market-vote-home-inner">
           <div>
