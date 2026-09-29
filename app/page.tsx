@@ -90,11 +90,11 @@ export default function HomePage() {
             </span>
             <h2 style={{ color: "white" }}>River View Cabins on the Ouachita River</h2>
             <p style={{ color: "rgba(255,255,255,0.86)" }}>
-              14 riverfront cabins with river views, hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and built-in fireplaces available November through March.
+              14 riverfront cabins with river views, hot tubs, a pool, horseback riding, kayak and canoe trips, quartz-crystal hiking trails, direct river access, and built-in fireplaces available November 1 through March 1.
             </p>
             <div className="button-row" style={{ marginTop: 22 }}>
               <a
-                href="https://riverviewcabins.com/"
+                href="https://www.riverviewcabins-canoes.com/"
                 target="_blank"
                 rel="sponsored noopener noreferrer"
                 className="btn-primary"
