@@ -1,3 +1,4 @@
+import styles from "@/components/LocalPaths.module.css";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,9 +6,8 @@ import BusinessCard from "@/components/BusinessCard";
 import { featuredBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Food & Drinks in Amity Arkansas | After the Caddo River",
-  description:
-    "Find food and drink stops in Amity, Arkansas near Glenwood and the Caddo River, including Slate Rock Brewing, Hometown Pizza, Trudy's, and local places to check before or after a river day.",
+  title: { absolute: "Restaurants & Food in Amity, AR | Lower Caddo Stops" },
+  description: "Find Amity food and drink stops, including Hometown Pizza, Trudy’s and Slate Rock Brewing. Plan a local meal before or after a Lower Caddo River day.",
   keywords: [
     "Amity Arkansas restaurants",
     "food in Amity Arkansas",
@@ -90,6 +90,17 @@ export default function RestaurantsPage() {
                 <p>{tip.text}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      <section className="section-tight">
+        <div className="container callout">
+          <span className="eyebrow">After your meal</span>
+          <h2>Keep the day simple around Amity.</h2>
+          <div className={`button-row ${styles.links}`}>
+            <Link href="/amity-river-day-itinerary" className="btn-primary">Plan a River Day</Link>
+            <Link href="/things-to-do" className="btn-secondary">Local Stops</Link>
+            <Link href="/events" className="btn-secondary">Community Events</Link>
           </div>
         </div>
       </section>

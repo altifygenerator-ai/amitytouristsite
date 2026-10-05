@@ -4,9 +4,8 @@ import Link from "next/link";
 import { nearbyTrips, siteUrl, thingsToDo } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Things To Do in Amity Arkansas | Near Glenwood & the Caddo River",
-  description:
-    "Find things to do in Amity, Arkansas and nearby: quiet Caddo River roads, local food, Slate Rock Brewing, small-town history, Glenwood, Lake Greeson, DeGray, and Crater of Diamonds day trips.",
+  title: { absolute: "Things to Do in Amity, AR | Lower Caddo & Local Stops" },
+  description: "Plan a quiet Amity visit with Lower Caddo River notes, local food, town history and nearby outdoor trips. Connect your day with the Glenwood guide.",
   keywords: [
     "things to do in Amity Arkansas",
     "things to do near Glenwood Arkansas",

@@ -1,3 +1,4 @@
+import styles from "@/components/LocalPaths.module.css";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -106,9 +107,10 @@ export default function CaddoAccessNearAmityPage() {
           <p>
             The access point brings you close to town. Food, local businesses, events, and the square are the next stops that help Amity when you are already nearby.
           </p>
-          <div className="button-row" style={{ marginTop: 24 }}>
+          <div className={`button-row ${styles.links}`}>
             <Link href="/restaurants" className="btn-primary">Food After the River</Link>
             <Link href="/amity-river-day-itinerary" className="btn-secondary">River Day Itinerary</Link>
+            <Link href="/events" className="btn-secondary">Community Events</Link>
           </div>
         </div>
       </section>
