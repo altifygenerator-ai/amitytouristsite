@@ -1,0 +1,16 @@
+.paths {
+  padding: 26px 0;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.links {
+  margin-top: 16px;
+}
+.links a {
+  min-height: 44px;
+  max-width: 100%;
+}
+.links a:focus-visible {
+  outline: 2px solid var(--river);
+  outline-offset: 4px;
+}

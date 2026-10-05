@@ -1,0 +1,27 @@
+{
+  "source": "575e4ca171f423247978f4fe9450260f7a9f9ae7",
+  "viewportWidths": [
+    360,
+    390,
+    768,
+    1280,
+    1440
+  ],
+  "checkedRoutes": [
+    "/",
+    "/amity-river-day-itinerary",
+    "/caddo-river-access-near-amity",
+    "/events",
+    "/local-business",
+    "/near-glenwood",
+    "/restaurants",
+    "/things-to-do"
+  ],
+  "responsiveChecks": 40,
+  "internalDestinations": 22,
+  "runtimeErrors": 0,
+  "missingJumpTargets": 0,
+  "overflowChecksFailed": 0,
+  "localQAUsesEmptyEventFixtures": true,
+  "liveSubmissionsTested": false
+}

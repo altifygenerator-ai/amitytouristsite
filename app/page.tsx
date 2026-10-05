@@ -1,3 +1,4 @@
+import LocalPaths from "@/components/LocalPaths";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,9 +16,8 @@ import {
 } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Amity Arkansas Guide | Caddo River, Trade Days & Local Stops",
-  description:
-    "Plan a visit to Amity, Arkansas near Glenwood and the Caddo River with lower-Caddo access notes, food stops, Slate Rock Brewing, town square history, Trade Days stories, and small local businesses.",
+  title: { absolute: "Amity, Arkansas | Lower Caddo River & Local Stops" },
+  description: "Explore the quieter side of the Caddo River near Glenwood: Amity food stops, river access notes, town-square history and local community updates.",
   alternates: { canonical: siteUrl },
 };
 
@@ -65,6 +65,7 @@ export default function HomePage() {
           </p>
         </div>
       </section>
+      <LocalPaths />
 
       <section className="section-tight">
         <div className="container stats-grid">
