@@ -15,7 +15,7 @@ type PublishedRow = {
 };
 
 const allowedCities = new Set(["amity"]);
-const alreadyShown = new Set([]);
+const alreadyShown = new Set<string>();
 const slugPattern = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const weekInSeconds = 604800;
 const fapBase = "https://www.findaplacebooking.com";
