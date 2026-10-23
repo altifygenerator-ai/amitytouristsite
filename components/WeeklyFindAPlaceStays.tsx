@@ -95,7 +95,7 @@ export default async function WeeklyFindAPlaceStays() {
               <article key={stay.slug} className="note-card">
                 <img src={cover} alt={stay.name} loading="lazy" decoding="async" style={{width:"100%",height:180,objectFit:"cover",borderRadius:12,marginBottom:16}} />
                 <h3>{stay.name}</h3>
-                <p>{stay.city} · {stay.type}</p>
+                <p>{stay.city} · {stay.property_type || "Stay"}</p>
                 <p>{excerpt(stay.description)}</p>
                 <TrackedBusinessLink href={href} business={stay.name} city="Amity" page="/near-glenwood" placement="weekly_find_a_place" placementType="editorial" action="find_a_place_booking" className="btn-secondary">View stay &amp; check dates ↗</TrackedBusinessLink>
               </article>
