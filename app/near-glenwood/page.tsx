@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import TrackedBusinessLink from "@/components/TrackedBusinessLink";
 import { siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
@@ -119,14 +120,18 @@ export default function NearGlenwoodPage() {
                 />
                 <h3>{stay.name}</h3>
                 <p>{stay.description}</p>
-                <a
+                <TrackedBusinessLink
                   href={"https://www.findaplacebooking.com/stays/" + stay.slug}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  business={stay.name}
+                  city="Glenwood / Caddo Gap"
+                  page="/near-glenwood"
+                  placement="nearby_find_a_place_stays"
+                  placementType="editorial"
+                  action="find_a_place_booking"
                   className="btn-secondary"
                 >
                   View on Find A Place ↗
-                </a>
+                </TrackedBusinessLink>
               </article>
             ))}
           </div>
