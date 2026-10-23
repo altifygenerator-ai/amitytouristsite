@@ -86,6 +86,58 @@ export default function NearGlenwoodPage() {
         </div>
       </section>
 
+      <section className="section section-warm" aria-labelledby="stays-near-glenwood">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Planning an overnight trip?</span>
+            <h2 id="stays-near-glenwood">Stay around Glenwood and Caddo Gap, then explore Amity.</h2>
+            <p>
+              Amity is an easy side trip from nearby cabin country. These published stays are in Caddo Gap,
+              not in Amity itself, and can be booked through Find A Place Booking.
+            </p>
+          </div>
+          <div className="card-grid">
+            {[
+              {
+                name: "Lil' Rustic",
+                slug: "lil-rustic",
+                description: "A creekside couples' cabin near Little Missouri Falls, hosted by Fancy Hill Cabins.",
+              },
+              {
+                name: "Bucks Ridge",
+                slug: "bucks-ridge",
+                description: "A separately hosted cabin in the Caddo Gap area near Ouachita outdoor adventures.",
+              },
+            ].map((stay) => (
+              <article className="note-card" key={stay.slug}>
+                <img
+                  src={"https://www.findaplacebooking.com/api/public/stay-cover/" + stay.slug}
+                  alt={stay.name + " cabin near Glenwood Arkansas"}
+                  loading="lazy"
+                  decoding="async"
+                  style={{ width: "100%", height: 170, objectFit: "cover", borderRadius: 12, marginBottom: 16 }}
+                />
+                <h3>{stay.name}</h3>
+                <p>{stay.description}</p>
+                <a
+                  href={"https://www.findaplacebooking.com/stays/" + stay.slug}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary"
+                >
+                  View on Find A Place ↗
+                </a>
+              </article>
+            ))}
+          </div>
+          <p style={{ marginTop: 22 }}>
+            <a href="https://www.glenwoodarkansas.org/glenwood-ar-cabins" target="_blank" rel="noopener noreferrer">
+              Compare more cabins and local lodging on the Glenwood Arkansas Guide →
+            </a>
+          </p>
+        </div>
+      </section>
+
       <section className="dark-band">
         <div className="dark-band-image">
           <Image src="/images/amity/TownSquare.jpg" alt="Amity Arkansas town square a short drive from Glenwood" fill sizes="100vw" />
