@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import TrackedBusinessLink from "@/components/TrackedBusinessLink";
+import WeeklyFindAPlaceStays from "@/components/WeeklyFindAPlaceStays";
 import { siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
@@ -142,6 +143,8 @@ export default function NearGlenwoodPage() {
           </p>
         </div>
       </section>
+
+      <WeeklyFindAPlaceStays />
 
       <section className="dark-band">
         <div className="dark-band-image">
