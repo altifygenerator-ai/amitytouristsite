@@ -4,7 +4,7 @@ import Link from "next/link";
 import { riverAccessPoints, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
-  title: "Caddo River Access Near Amity Arkansas | Hwy 182 Notes",
+  title: "Caddo River Access Near Amity, Arkansas | Parking & River Access",
   description:
     "Find Caddo River access notes near Amity, Arkansas, including the Hwy 182 access point, private land reminders, parking cautions, and lower-Caddo planning links.",
   keywords: [
@@ -41,7 +41,7 @@ export default function CaddoAccessNearAmityPage() {
         <div className="container split-grid">
           <div className="copy-block">
             <span className="eyebrow">Caddo River access near Amity</span>
-            <h1>Start with Hwy 182, then check the conditions in front of you.</h1>
+            <h1>Where to access the Caddo River near Amity</h1>
             <p className="lead">
               The strongest Amity-side river access note is the Hwy 182 crossing north of town. It is listed by a local outfitter and documented in the Encyclopedia of Arkansas, but access only stays useful when people respect the river and the land around it.
             </p>
