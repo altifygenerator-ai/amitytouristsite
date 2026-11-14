@@ -79,18 +79,7 @@ export default function HomePage() {
 
       <RiverViewCabinsHomeAd />
 
-      <section className="section-tight market-vote-home-strip">
-        <div className="container market-vote-home-inner">
-          <div>
-            <span className="eyebrow small">Amity Saturday Market update</span>
-            <h2>The market project is postponed for now.</h2>
-            <p>
-              The September 19 market did not move forward as planned. No replacement date has been announced yet, and new vendor applications are paused while the project is revisited.
-            </p>
-          </div>
-          <Link href="/amity-saturday-market" className="btn-primary">Read the Market Update</Link>
-        </div>
-      </section>
+
 
       <section className="section section-warm">
         <div className="container split-grid">
@@ -101,7 +90,7 @@ export default function HomePage() {
               Glenwood already brings people close for cabins, outfitters, float trips, and the Caddo River. Amity is just far enough off the main path to feel quieter, but close enough for lunch, Slate Rock, the lower-Caddo side, and a slower look around the square.
             </p>
             <p>
-              Amity does not need to pretend it is bigger than it is. It just needs to be easier to find when you are already nearby and looking for one more local stop before you head home.
+              Come for the river, stay for a meal and a look around town.
             </p>
             <div className="button-row" style={{ marginTop: 26 }}>
               <Link href="/near-glenwood" className="btn-primary">Plan the Glenwood Side Trip</Link>
@@ -145,6 +134,19 @@ export default function HomePage() {
             <Link href="/local-business" className="btn-dark">View Local Stops</Link>
             <Link href="/contact" className="btn-secondary">Add or Sponsor a Business</Link>
           </div>
+        </div>
+      </section>
+
+      <section className="section-tight market-vote-home-strip">
+        <div className="container market-vote-home-inner">
+          <div>
+            <span className="eyebrow small">Amity Saturday Market update</span>
+            <h2>The market project is postponed for now.</h2>
+            <p>
+              The September 19 market did not move forward as planned. No replacement date has been announced yet, and new vendor applications are paused while the project is revisited.
+            </p>
+          </div>
+          <Link href="/amity-saturday-market" className="btn-primary">Read the Market Update</Link>
         </div>
       </section>
 
