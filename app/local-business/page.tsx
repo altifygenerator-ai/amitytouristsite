@@ -73,6 +73,21 @@ export default function LocalBusinessPage() {
               Call first to check hours and availability.
             </p>
           </div>
+          <div className="card-grid" style={{ marginBottom: 24 }}>
+            {[
+              ["Davidson's Grocery", "Grocery • 105 E Thompson St", "870-342-9400"],
+              ["Amity Auto Parts", "Auto parts • 109 E Thompson St", "870-342-5285"],
+              ["Amity Community Health Center", "Healthcare • 210 N Main St", "870-342-5606"],
+              ["Amity Gentle Dental", "Dental care • 439 E Thompson St", "870-342-5265"],
+            ].map(([name, info, phone]) => (
+              <article className="note-card" key={name}>
+                <h3>{name}</h3>
+                <p>{info}</p>
+                <p><a href={`tel:${phone}`}>Call {phone}</a></p>
+                <small>City directory listing — verify current hours and operation by phone.</small>
+              </article>
+            ))}
+          </div>
           <p>
             <a href="https://amityarkansas.us/business-directory/" target="_blank" rel="noopener noreferrer">
               View the City of Amity business directory
