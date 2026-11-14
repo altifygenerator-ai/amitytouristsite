@@ -60,6 +60,27 @@ export default function LocalBusinessPage() {
         </div>
       </section>
 
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">More local services</span>
+            <h2>Find everyday businesses around Amity.</h2>
+            <p className="lead">
+              The City of Amity also maintains a broader business directory covering
+              grocery and convenience stores, health services, auto shops, banks,
+              salons, and other everyday stops. These entries are an additional
+              reference, not a guarantee that every business is currently operating.
+              Call first to check hours and availability.
+            </p>
+          </div>
+          <p>
+            <a href="https://amityarkansas.us/business-directory/" target="_blank" rel="noopener noreferrer">
+              View the City of Amity business directory
+            </a>
+          </p>
+        </div>
+      </section>
+
       <section className="section section-river">
         <div className="container two-grid">
           <div className="note-card">

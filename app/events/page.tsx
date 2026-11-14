@@ -11,7 +11,34 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteUrl}/events` },
 };
 
-export default function EventsPage() {
+type PublicEvent = {
+  id: string;
+  title: string;
+  description: string | null;
+  city: string | null;
+  location_name: string | null;
+  start_date: string;
+  start_time: string | null;
+  source_url: string | null;
+};
+
+async function fetchVerifiedAmityEvents(): Promise<PublicEvent[]> {
+  try {
+    const response = await fetch(
+      "https://www.glenwoodarkansas.org/api/events?site=amity",
+      { next: { revalidate: 600 } },
+    );
+    if (!response.ok) throw new Error("Event source unavailable");
+    const data = (await response.json()) as { events?: PublicEvent[] };
+    return Array.isArray(data.events) ? data.events : [];
+  } catch (error) {
+    console.error("Amity events could not load", error);
+    return [];
+  }
+}
+
+export default async function EventsPage() {
+  const events = await fetchVerifiedAmityEvents();
   return (
     <main>
       <section className="section section-warm">
@@ -33,6 +60,33 @@ export default function EventsPage() {
           <div className="image-panel">
             <Image src="/images/amity/TownSquare.jpg" alt="Amity Arkansas town square" fill sizes="(max-width: 900px) 100vw, 45vw" />
           </div>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Current community calendar</span>
+            <h2>Upcoming confirmed events near Amity</h2>
+            <p className="lead">These events come from public organizer sources. Check each original listing before making plans.</p>
+          </div>
+          {events.length ? (
+            <div className="three-grid">
+              {events.map((event) => (
+                <article className="note-card" key={event.id}>
+                  <p className="eyebrow">{new Date(event.start_date + "T12:00:00").toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" })}</p>
+                  <h3>{event.title}</h3>
+                  <p>{[event.location_name, event.city].filter(Boolean).join(" · ")}</p>
+                  {event.description ? <p>{event.description}</p> : null}
+                  {event.source_url && /^https:\/\//i.test(event.source_url) ? (
+                    <a href={event.source_url} target="_blank" rel="noopener noreferrer">Original event details</a>
+                  ) : null}
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="lead">No upcoming events are currently verified. Have a confirmed Amity date? Use the event submission link below.</p>
+          )}
         </div>
       </section>
 
