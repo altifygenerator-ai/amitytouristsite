@@ -81,6 +81,13 @@ export default function Footer() {
             <p>
               Lower-Caddo access notes, local food, town square history, Trade Days memories, small businesses, and quiet southwest Arkansas stops near Glenwood.
             </p>
+            <div className="mt-5 flex items-center gap-2 text-sm">
+              <span aria-hidden="true" className="grid h-6 w-6 shrink-0 place-items-center rounded-full border border-white/25 text-xs font-black text-white">f</span>
+              <a href="https://www.facebook.com/profile.php?id=61589335273364" target="_blank" rel="noopener noreferrer"
+                className="font-semibold text-white/80 underline-offset-4 transition hover:text-white hover:underline focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                Follow Natural State on Facebook
+              </a>
+            </div>
           </div>
 
           <div className="footer-brand-actions">
