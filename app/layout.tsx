@@ -1,3 +1,4 @@
+import NstpReachTracker from "@/components/NstpReachTracker";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Footer from "@/components/layout/Footer";
@@ -129,6 +130,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <Footer />
         <Analytics />
+        <NstpReachTracker />
       </body>
     </html>
   );
