@@ -1,8 +1,9 @@
+import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BusinessCard from "@/components/BusinessCard";
-import { featuredBusinesses, siteUrl } from "@/data/amity";
+import { featuredBusinesses as localFeaturedBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
   title: "Food & Drinks in Amity Arkansas | After the Caddo River",
@@ -35,7 +36,9 @@ const foodTips = [
   },
 ];
 
-export default function RestaurantsPage() {
+export const revalidate = 300;
+export default async function RestaurantsPage() {
+  const featuredBusinesses = mergeApprovedListings(localFeaturedBusinesses, await approvedCityListings("Amity"));
   return (
     <main>
       <section className="section section-warm">

@@ -1,8 +1,9 @@
+import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BusinessCard from "@/components/BusinessCard";
-import { featuredBusinesses, siteUrl } from "@/data/amity";
+import { featuredBusinesses as localFeaturedBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
   title: "Local Businesses in Amity Arkansas | Food, Stops & Visitor Info",
@@ -18,7 +19,9 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteUrl}/local-business` },
 };
 
-export default function LocalBusinessPage() {
+export const revalidate = 300;
+export default async function LocalBusinessPage() {
+  const featuredBusinesses = mergeApprovedListings(localFeaturedBusinesses, await approvedCityListings("Amity"));
   return (
     <main>
       <section className="section section-warm">

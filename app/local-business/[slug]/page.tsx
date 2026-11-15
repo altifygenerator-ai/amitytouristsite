@@ -1,3 +1,4 @@
+import { approvedCityListings, mergeApprovedListings } from "@/lib/nstp-business-sync";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,13 +32,15 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
+export const revalidate = 300;
 export default async function LocalBusinessDetailPage({ params }: { params: Params }) {
   const { slug } = await params;
-  const business = getBusiness(slug);
+  const syncedBusinesses = mergeApprovedListings(featuredBusinesses, await approvedCityListings("Amity"));
+  const business = syncedBusinesses.find(b => b.slug === slug);
 
   if (!business) notFound();
 
-  const otherBusinesses = featuredBusinesses.filter((item) => item.slug !== business.slug);
+  const otherBusinesses = syncedBusinesses.filter((item) => item.slug !== business.slug);
   const directionsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
     `${business.name} Amity Arkansas`
   )}`;

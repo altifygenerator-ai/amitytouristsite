@@ -1,0 +1,31 @@
+name: Business listing sync quality checks
+on:
+  push:
+    branches: [feature/approved-city-edits-sync]
+  pull_request:
+    paths:
+      - "**/nstp-business-sync.ts"
+      - "**/local-business/**"
+      - "**/local-businesses/**"
+      - "**/restaurants/**"
+      - "**/murfreesboro-local-businesses/**"
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci
+      - run: node --test tests/nstp-owner-sync.test.cjs
+        env:
+          NSTP_TEST_CITY: "Amity"
+          NSTP_TEST_SITE: "amityarkansas.org"
+      - run: npx tsc --noEmit
+      - run: npm run build
+        env:
+          NEXT_TELEMETRY_DISABLED: "1"
