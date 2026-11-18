@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import BusinessCard from "@/components/BusinessCard";
+import TrackedBusinessLink from "@/components/TrackedBusinessLink";
 import { featuredBusinesses as localFeaturedBusinesses, siteUrl } from "@/data/amity";
 
 export const metadata: Metadata = {
@@ -18,6 +19,25 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: `${siteUrl}/local-business` },
 };
+
+const localServices = [
+  {
+    name: "Red Dirt Property Services LLC",
+    category: "Property Cleanup • Dirt Work • Brush Hogging",
+    description:
+      "Amity-area property cleanup, junk hauling, brush hogging, driveway and culvert work, tree cleanup, and small demolition jobs for local property owners.",
+    phone: "870-828-2562",
+    website: "https://www.reddirtpropertyservicesar.com/",
+  },
+  {
+    name: "Lyn & Lili's Tidy House",
+    category: "House Cleaning • Rental Turnovers • Home Help",
+    description:
+      "Serving Amity and nearby communities with regular and deep cleaning, rental turnovers, move-out cleaning, home organization, and non-medical senior household help.",
+    phone: "870-260-4536",
+    website: "https://www.lynandlilistidyhouse.com/",
+  },
+] as const;
 
 export const revalidate = 300;
 export default async function LocalBusinessPage() {
@@ -58,6 +78,52 @@ export default async function LocalBusinessPage() {
           <div className="card-grid">
             {featuredBusinesses.map((business) => (
               <BusinessCard key={business.slug} business={business} page="/local-business" placement="local-business-directory" />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="local-services">
+        <div className="container">
+          <div className="section-heading">
+            <span className="eyebrow">Local services</span>
+            <h2>Property work and household help around Amity.</h2>
+            <p className="lead">
+              These locally based service businesses help residents, rental owners, and nearby property owners.
+              Contact the business for availability and a quote.
+            </p>
+          </div>
+          <div className="card-grid">
+            {localServices.map((service) => (
+              <article key={service.name} className="note-card">
+                <span className="eyebrow small">{service.category}</span>
+                <h3>{service.name}</h3>
+                <p>{service.description}</p>
+                <div className="button-row" style={{ marginTop: 22 }}>
+                  <TrackedBusinessLink
+                    href={service.website}
+                    business={service.name}
+                    page="/local-business"
+                    placement="local-services"
+                    placementType="editorial"
+                    action="website"
+                    className="btn-primary"
+                  >
+                    Visit Website
+                  </TrackedBusinessLink>
+                  <TrackedBusinessLink
+                    href={`tel:${service.phone.replace(/[^\d]/g, "")}`}
+                    business={service.name}
+                    page="/local-business"
+                    placement="local-services"
+                    placementType="editorial"
+                    action="call"
+                    className="btn-secondary"
+                  >
+                    {service.phone}
+                  </TrackedBusinessLink>
+                </div>
+              </article>
             ))}
           </div>
         </div>
